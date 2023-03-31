@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간분할태그_시맨틱태그</title>
+</head>
+<body>
+
+    <h1>공간분할태그_시맨틱태그</h1>
+    <p>웹페이지에 레이아웃을 설정하기 위해 공간을 구분하는 용도로
+        사용<br>
+        아무런 특징을가지고 있지 않고, 단,인라인박스와 블럭박스로 나눈다.
+    </p>
+
+    <ul>
+        <li>div박스 - 블럭박스</li>
+        <li>span박스 -  인라인박스</li>
+    </ul>
+
+    <h3> 예제보기 </h3>
+    <p>div와 p의차이점</p>
+    <div>div박스 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt aliquam voluptas temporibus delectus corporis, dignissimos accusamus ducimus. Aliquam facilis velit, consequatur natus illo corporis doloribus eveniet quasi suscipit. Tempora, possimus.</div>
+    <p>p박스 -Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aliquid, molestiae accusamus doloremque officia officiis fugiat architecto libero dolorum sed, voluptate nesciunt corrupti, voluptatem velit incidunt praesentium nostrum ad ut?</p>
+    <p>span과 글자태그의 차이점</p>
+    <div><b>Lorem ipsum</b> <i>dolor sit</i> amet consectetur <span>adipisicing</span> elit. Illum omnis natus laboriosam delectus, explicabo ut temporibus eius ullam quae, non modi corrupti molestiae maiores vero architecto ipsum, nihil doloribus expedita.</div>
+
+    <style>
+        b {font-weight: normal;}
+        i {font-style: normal;}
+        span {font-weight: bold;
+        font-style: italic;}
+    </style>
+
+
+
+    <h2>시맨틱태그</h2>
+    <p>
+        특징 - 각각의 의미하는 바가 정해져 있으므로 위치가 적절치 않은곳에 쓰였을경우 웹접근성 부분에서 오류로 파악하기도 한다.
+    </p>
+    <p>HTML5의 가장 획기적인 태그<br>
+    semantic - 의미론적인 이라는 사전적의미를 갖는다.<br>
+    시맨틱웹은 컴퓨터 프로그램이 코드를 읽고 의미를 인식
+할수 있는 지능형 웹 언어를 표현 </p>
+    <p>
+    특징 - 각각의 의미하는 바가 정해져 있으므로 위치가 적절치 않은곳에 쓰였을경우 웹접근성 부분에서 오류로 파악하기도 한다.<br>
+    오래된브라우저의 경우 모든 시맨틱태그를 div로 대처한다.<br>
+    기본구조가 블럭박스로 인식됨
+</p>
+
+<h3>시맨틱종류</h3
+    
+<ul>
+    <li>header태그 -머릿말,페이지제목,페이지소개, 로고,
+                    네비게이션(메뉴)를 담는다.
+    </li>
+    <li>nav태그 - 링크가 포함된 메뉴리스트들의 내비게이션 </li>
+    <li>section태그 - Html 문서에 포함된 독립적으로 공간을
+                나누고자할때 사용 
+                제목요소를 포함하고 있는경우가 많다.
+    </li>
+
+    <li>article태그 - 섹션태그와 비슷한 성질을 가지고 있는 
+                    소단락구간<br>
+                    블로그포스트, 기사, 논평 등으로 활용<br>
+                    제목태그는 h2~h6 까지 담는다.
+
+                 </li>
+
+    <li>aside태그 - 본문흐름에서 벗어나는 구조</li>
+    <li>footer 태그 - 업체정보,저작권정보, 사이트맵 등 
+        사이트의 주요알림내용을 설정
+    </li>
+
+
+    <!-- 위의 사항들은 웹사이트를 제작할때 거의 필수적으로
+    사용되는 시맨틱태그 -->
+    <!-- 기타시맨틱태그 -->
+    <li> figure태그 - 삽화,다이어그램 등 문서의 주요 흐름의 
+                    독립적인 콘텐츠를 정의할때 사용
+    </li>
+    <li> figcaption태그 - figure태그 내부에 첫번째 혹은 마지막
+        자식태그로 사용되면서 figure태그의내용을 정의,설명
+        할때 사용 
+    </li>
+
+</ul>
+
+
+
+</body>
+</html>

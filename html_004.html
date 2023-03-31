@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블태그</title>
+</head>
+
+<body>
+    <h1>테이블태그</h1>
+    <p>웹문서에서 표를 만드는 요소<br>
+        테이블태그 안에 열과,행의 태그를 자식태드로 갖는다k>
+        table 태그는 블럭요소이다.<br>
+        행을 먼저 만들고 행내부에 열을 자손자라 두어
+        내용을 작성한다.<br>
+        table태그는 선값이 기본 0으로 셋팅되어있어
+
+
+
+
+    <ul>
+        <li>행요소 - tr태그</li>
+        <li>열요소 - td태그(내용작성태그)</li>
+        <li>병합속성 - 세로병합 : nowspan='갯수'
+            가로병합 : colspan='갯수'</li>
+        <li>병합시주의사항 - </li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <td rowspan="2">1행1열</td>
+            <td colspan="2">1행2열</td>
+
+        </tr>
+        <tr>
+
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+        <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+        </tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                <center>공연요금</center>
+            </td>
+        </tr>
+        <tr>
+            <td>구분</td>
+            <td>R석</td>
+            <td>S석</td>
+        </tr>
+        <tr>
+            <td>성인</td>
+            <td>50,000원</td>
+            <td>30,000원</td>
+        </tr>
+        <tr>
+            <td>청소년</td>
+            <td>40,000원</td>
+            <td>20,000원</td>
+        </tr>
+        <tr>
+            <td rowspan="2">공연시간</td>
+            <td>1회차</td>
+            <td>13:00~15:00</td>
+        </tr>
+        <tr>
+            <td>2회차</td>
+            <td>16:00~18:00</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h3>메뉴판예제</h3>
+
+    <table border="1">
+        <tr>
+            <td colspan="6">
+                <center>한국의차</center>
+            </td>
+
+        </tr>
+        <tr>
+            <td rowspan="6">뿌리차</td>
+            <td>인삼차</td>
+            <td rowspan="9">과일차</td>
+            <td>수정과</td>
+            <td rowspan="5">잎차</td>
+            <td>뽕잎차</td>
+        </tr>
+        <tr>
+            <td>당귀차</td>
+            <td>유자차</td>
+            <td>감잎차</td>
+
+        </tr>
+        <tr>
+            <td>생강차</td>
+            <td>구기자차</td>
+            <td>솔잎차</td>
+
+        </tr>
+        <tr>
+            <td>칡차</td>
+            <td>대추차</td>
+            <td>국화차</td>
+
+        </tr>
+        <tr>
+            <td>둥글레차</td>
+            <td>오미자차</td>
+            <td>이슬차</td>
+
+        </tr>
+        <tr>
+            <td>마차</td>
+            <td>매실차</td>
+            <td rowspan="4">기타</td>
+            <td>두충차</td>
+
+        </tr>
+        <tr>
+            <td rowspan="3">곡물차</td>
+            <td>보리차</td>
+            <td>모과차</td>
+            <td>영지버섯차</td>
+
+        </tr>
+        <tr>
+            <td>옥수수차</td>
+            <td>산수유차</td>
+            <td>귤강차</td>
+
+        </tr>
+        <tr>
+            <td>현미차</td>
+            <td>탱자차</td>
+            <td>쌍화차</td>
+
+        </tr>
+    </table>
+
+
+
+
+
+
+    </p>
+</body>
+
+</html>
