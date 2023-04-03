@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식태그</title>
+</head>
+
+<body>
+    <h1>입력양식태그</h1>
+
+    <p>입력양식은 사용자에 정보를 입력받거나
+        보내는 요소, 예를들어 로그인/회원가입/검색등이 있다.
+    </p>
+    <p><strong>form태그내부에 작성하며 다양한 방식의 요소를 활용한다.</strong></p>
+
+
+    <form action="" method="get"></form>
+
+    <p>from태그 내부에 전달방식을 기대하는 method요소를 한다.</p>
+    <ul>
+        <li>get방식 - 직접전달(오픈형)/당근마켓</li>
+        <li>post방식 - 비밀전달 (폐쇄형)/본인외개봉금지</li>
+    </ul>
+
+
+    <h2>입력양식태그</h2>
+    <table border="1">
+        <tr>
+            <td>태그명</td>
+            <td>속성명(type="속성값")</td>
+            <td>설명</td>
+        </tr>
+        <tr>
+            <td>form</td>
+            <td>특성 : 보이지않음 / block태그</td>
+            <td>입력양식의 처음과 끝</td>
+        </tr>
+        <tr>
+            <td rowspan="17">input - inline양식</td>
+            <td>text</td>
+            <td>글자입력양식</td>
+        </tr>
+
+
+
+        </form>
+
+        <tr>
+
+            <td>password</td>
+            <td>비밀번호양식 / *로 표기등</td>
+        </tr>
+
+        <tr>
+
+            <td>submit</td>
+            <td>제출버튼(확인)</td>
+        </tr>
+
+        <tr>
+
+            <td>reset</td>
+            <td>초기화버튼</td>
+        </tr>
+        <!-- type속성외 다른속성 -->
+        <tr>
+            <td>input</td>
+            <td>value="이름작명"</td>
+            <td>외부에 보이는 글씨 변경</td>
+        <tr>
+
+            <td>name="네이밍작성"</td>
+            <td>내부에 연결해주는 속성</td>
+        </tr>
+        </tr>
+        <tr>
+
+            <td>file</td>
+            <td>내 컴퓨터에 있는 폴더 열기</td>
+        </tr>
+        <tr>
+            <td>search</td>
+            <td>검색박스로 외간으로는 text 박스와 같으나 글에x표시로 나타남</td>
+        </tr>
+        <tr>
+            <td>button</td>
+            <td>버튼생성/ <button>과 다름</td>
+        </tr>
+        <tr>
+            <td>checkbox</td>
+            <td>다중선택박스 - 사각형모양</td>
+        </tr>
+        <tr>
+            <td>radio</td>
+            <td>단일선택버튼 - 덩그라미모양 속성의 이름을 통일</td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>@를 넣지않았을경우 입력양식오류 나타남</td>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>숫자입력방식 - 다양한속성을 함께작성</td>
+        </tr>
+        <tr>
+            <td>min="최소값"max="최대값"step="건너띄기"</td>
+            <td>수다 들어가는 경우 모두 적용</td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>컬러를 선택할수 있는 기능</td>
+        </tr>
+        <tr>
+            <td>ranger</td>
+            <td>슬라이더바 숫자범위로 나타남</td>
+        </tr>
+        <tr>
+            <td>datetime-local,month,week,date,time</td>
+            <td>년월일,시간</td>
+        </tr>
+        <tr>
+            <td>textarea</td>
+            <td>cols="가로공간"(글씨최대값)"</td>
+            <td>글자공간태그로,메모 등 긴글작성시사용</td>
+        </tr>
+        <tr>
+            <td>select</td>
+            <td>multipul="mul</td>
+            <td>선택양식생성</td>
+        </tr>
+        <tr>
+            <td>option</td>
+            <td></td>
+            <td>셀렉트태그 내부에 선택하는요소</td>
+        </tr>
+        <tr>
+            <td>optgroup</td>
+            <td></td>
+            <td>option태그를 묶어주는 역할 / 클릭은안됨</td>
+        </tr>
+        <tr>
+            <td>fieldset</td>
+            <td></td>
+            <td>그룹된 부분을 선으로 그려서 박스를 만들어준다.</td>
+        </tr>
+        <tr>
+            <td>legend</td>
+            <td></td>
+            <td>fieldset 내부에 선을 둟고 써지는 제목</td>
+        </tr>
+
+    </table>
+
+    <h3>예제</h3>
+    <form action="" method="get">
+        <input type="text" value="아이디"><br>
+        <input type="password"><br>
+        <input type="submit" value="확인"><br>
+        <input type="reset" value="취소">
+        <input type="file"><br>
+        <input type="search">
+        <input type="button" value="검색">
+        <button>빈버튼</button><br>
+        <input type="checkbox">국어 <input type="checkbox">수확<br>
+        <input type="radio" name="gender">남자<input type="radio" name="gender">여자<br>
+        <input type="radio" name="day">주중<input type="radio" name="day">주말<br>
+        email주소: <input type="email"><br>
+        <input type="number" min="1" max="99" step="5" value="1"><br>
+        <input type="color"><br>
+        <input type="range" value="0">
+        <input type="datetime-local">
+        <input type="month">
+        <input type="week">
+        <input type="date">
+        <input type="time"><br>
+        <textarea name="" id="" cols="60" rows="10"></textarea>
+        <br>
+        <br>
+        <select name="" id="">
+        <option value="">html5</option>
+        <option value="">html6</option>
+        </select>
+        <select multiple>
+            <optgroup label="식사메뉴">
+                <option value="">김치찌개</option>
+                <option value="">제육볶음</option>
+                <option value="">불고기</option>
+            </optgroup>
+            <optgroup label="주류메뉴">
+                <option value="">매화수</option>
+                <option value="">진로</option>
+                <option value="">맥주</option>
+            </optgroup>
+            
+        </select>
+    </form>
+    <hr>
+    <!-- 비밀전달문서로 페이지를 확인이 되지 않음 -->
+    <form action="" method="get">
+        <fieldset>
+            <legend>methodpost 방식</legend>
+            <input type="text"><br>
+            <input type="password"><br>
+            <input type="submit">
+        </fieldset>
+    </form>
+    <!-- form 으로 묶여있지 않아 하나의 이미지에 불과함 -->
+    <form action="" method="get">
+        <input type="text"><br>
+        <input type="password"><br>
+        <input type="submit"><br>
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>
