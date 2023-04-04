@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방학특강신청</title>
+</head>
+<!-- 구글폰트연결-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<!-- 내부스타일시트 -->
+<style>
+    /* 웹폰트를 사용하여 모든pc에서 사용할수있게 하겠다. */
+
+    * {font-family: 'Jua', sans-serif;}
+    legend {font-weight: 600;
+    padding: 10px;}
+    fieldset {margin-bottom: 50px;
+    padding: 20px;}
+    label {padding right: 20px;}
+    .name {padding-left: 20px;}
+
+/* 후손자방식 */
+ul label {color: green;}
+/* 자손자방식 */
+ul>li>label {width: 100px;
+            display: inline-block;
+        text-align: right;
+        }
+ul {list-style: none;}
+li {margin-bottom: 10px;}
+div {text-align: center;}
+
+</style>
+
+
+
+
+
+<!-- 개별작업 -->
+<body>
+    <h2>겨울방학특강신청</h2>
+    <form action="">
+        <fieldset>
+            <legend>수강신청인</legend>
+            학번<input type="text">
+            이름<input type="text">
+        </fieldset>
+        <fieldset>
+            <legend>수강과목을 선택하세요</legend>
+            <ul>
+                <li>선호색상<input type="color"></li>
+                <li>신청과목(회화) <input type="radio" name="회화">영어회화(초급)<input type="radio" name="회화">영어회화(중급)<input
+                        type="radio" name="회화">영어회화(고급)</li>
+                <li>신청과목(자격) <input type="radio" name="자격">TOEIC<input type="radio" name="자격">TOEFL<input type="radio"
+                        name="자격">OPIC</li>
+                <li>관심분야 <input type="checkbox">문법<input type="checkbox">Vocaburary<input type="checkbox">회화<input
+                        type="checkbox">리스닝<input type="checkbox">뉴스청취<input type="checkbox">독해</li>
+        </fieldset>
+        </ul>
+
+        <fieldset>
+            <legend>강의시간을 선택해 주세요</legend>
+            <ul>
+                <li>개강주<input type="week"></li>
+                <li>강의시간<input type="time"></li>
+            </ul>
+        </fieldset>
+        <input type="button" value="수강신청">
+        <input type="reset" value="다시쓰기">
+    </form>
+
+
+    <!-- 공동작업_선생님과함께 -->
+
+
+
+    <h1>여름방학특강신청</h1>
+    <form action="" method="">
+
+
+        <fieldset>
+            <legend>수강신청인</legend>
+            <label for="schoolNum">학번</label><input type="text" id="schoolNum" required autofocus>
+            <!-- required:필수항목표시  autofocus:자동으로커서확인 -->
+            <label for="name" class="name">이름 <input type="text" id="name"></label>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>수강과목을 선택하세요</legend>
+            <ul>
+                <li><label for="color">색상</label>
+                    <input type="color" id="color">
+                </li>
+                <li>
+                    <label for="sub">신청과목(회화)</label>
+                    <input type="radio" name="eng">
+                    <span>영어회화(초급)</span>
+                    <input type="radio" name="eng">
+                    <span>영어회화(중급)</span>
+                    <input type="radio" name="eng">
+                    <span>영어회화(고급)</span>
+                </li>
+                <li>
+                    <label for="step">신청과목(자격)</label>
+                    <input type="radio" name="class"><span>TOEIC</span>
+                    <input type="radio" name="class"><span>TOEFL</span>
+                    <input type="radio" name="class"><span>OPIC</span>
+                </li>
+                <li>
+                    <label for="like">관심분야</label>
+                    <input type="checkbox" id="like"><span>문법</span>
+                    <input type="checkbox" id="like"><span>Vocaburary</span>
+                    <input type="checkbox" id="like"><span>회화</span>
+                    <input type="checkbox" id="like"><span>리스닝</span>
+                    <input type="checkbox" id="like"><span>뉴스청취</span>
+                    <input type="checkbox" id="like"><span>독해</span>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>강의시간을 선택해주세요</legend>
+            <ul>
+                <li>
+                    <label for="week">개강주</label>
+                    <input type="week">
+                </li>
+                <li>
+                    <label for="time">
+                        강의시간
+                    </label>
+                    <input type="time" id="time">
+                </li>
+            </ul>
+        </fieldset>
+        <div>
+            <input type="submit" value="수강신청">
+            <input type="reset" value="다시쓰기">
+        </div>
+    </form>
+
+    <style>
+
+    </style>
+
+
+
+</body>
+
+
+</html>
