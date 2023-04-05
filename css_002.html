@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 박스속성</title>
+
+</head>
+
+<body>
+    <h1>박스속성</h1>
+    <p>웹페이지 레이아웃시 가장 중요한 속성</p>
+    <ul>
+        <li>요소크기설정 - width, height</li>
+        <li>영역설정 - padding</li>
+        <li>외각선설정 - border</li>
+        <li>여백설정 - margin</li>
+    </ul>
+    <p>작성법</p>
+    <ul>
+        <li>전체적용 - 숫자와 단위를 함께 하나만 작성</li>
+        <li>각자적용 - 숫자와 단위를 4번써서 작성한다. 순서는 위,오른쪽,아래,왼쪽
+            작성시 쉼표를 쓰지않고 띄어쓰기를 통해 작성한다.
+        </li>
+        <li>세트적용 - 위아래/왼쪽오른쪽 숫차와단위를 2번써서 작성한다
+            앞에가 위아래, 뒤에가 왼쪽오른쪽 각자적응과 마찬가지로 띄어쓰기를 통해 작성한다.
+        </li>
+        <li>부분적용
+            <ul>
+                <li class="box001">margin-top:위쪽여백</li>
+                <li class="box002">margin-bottom:아래쪽여백</li>
+                <li class="box003">margin-left:왼쪽여백</li>
+                <li class="box004">margin-right:오른쪽여백</li>
+                <li class="box005">padding-top:위쪽영역</li>
+                <li class="box006">padding-bottom:아래쪽영역</li>
+                <li class="box007">padding-left:왼쪽영역</li>
+                <li class="box008">padding-right:오른쪽영역</li>
+            </ul>
+        </li>
+    </ul>
+<style>
+    /* 복수선택 */
+    .box001 , .box002 , .box003 , .box004 , .box005 , .box006 , .box007 , .box008
+    {width: 400px;
+    background-color: aqua;
+    }
+
+    .box001 {margin-top: 200px;}
+    .box002 {margin-bottom: 50px;}
+    .box003 {margin-left: 50px;}
+    .box004 {margin-right: 200px;}
+    .box005 {padding-top: 200px;}
+    .box006 {padding-bottom: 50px;}
+    .box007 {padding-left: 50px;}
+    .box008 {padding-right: 200px;}
+</style>
+
+
+
+
+
+    <h4>border설정방법</h4>
+    <p>박스의 테두리를 말하며 패딩바깥쪽에 위치한다.<br>
+색상,굵기,모양으로 설정한다.</p>
+<ul>
+    <li>border-color : 색상기재</li>
+    <li>border-width : 숫자와단위</li>
+    <li>border-style
+        <ul class="border">
+            <li class="border001">none - 선을 제거</li>
+            <li class="border002">solid - 실선</li>
+            <li class="border003">dotted - 동그라미점으로 점선만들기</li>
+            <li class="border004">dashed - 긴사각형 점선</li>
+            <li class="border005">double - 실선두줄</li>
+            <li class="border006">groove - (액자형) - 테두리가 파인것처럼 그려짐</li>
+            <li class="border007">ridge - (액자형) - 테두리가 튀어나온것처럼 그려짐 - groove 반대스타일</li>
+            <li class="border008">inset - (액자형) - 내부요소가 파인것처럼 그려짐</li>
+            <li class="border009">outset - (액자형) - 내부요소가 튀어나온것처럼 그려짐 - inset 반대스타일 </li>
+        </ul>
+    </li>
+</ul>
+<style>
+    .border {width: 600px;
+    background-color: bisque;
+padding: 20px;
+border:  2px black solid;}
+.border li {width: 100%; background-color: brown;
+padding: 10px;
+box-sizing: border-box;
+margin-bottom: 10px;}
+.border001 {border-top: 10px red solid;}
+.border002 {border-bottom: 10px red solid;}
+.border003 {border-left: 10px  yellow dotted;}
+.border004 {border-right: 10px yellow dashed;}
+.border005 {border-bottom: 10px yellow double;}
+.border006 {border: 10px yellow groove;}
+.border007 {border: 10px coral ridge;}
+.border008 {border: 10px gold inset;}
+.border009 {border: 10px darkblue outset;}
+
+</style>
+
+    <p>작성법 - color,width,style을 한번에 쓸수도 있고 각자쓸수도 있다.
+        순번에 관계없음
+        <strong>border : red 2px solid(2px너비의 빨간색실선)</strong>
+    </p>
+</body>
+</html>
