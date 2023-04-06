@@ -105,5 +105,119 @@ margin-bottom: 10px;}
         순번에 관계없음
         <strong>border : red 2px solid(2px너비의 빨간색실선)</strong>
     </p>
+
+<H4>코너곡선만들기 - border - radius</H4>
+<p>원을만들거나 둥근사각형을 제작할떄 사용한다. <br>
+주위사항, 짧은변의 50%를 초과하지 않는다</p>
+
+<div class="boxSet">
+    <div class="box1">둥근사각형1</div>
+    <div class="box2">둥근사각형2</div>
+    <div class="box3">둥근사각형3</div>
+    <div class="box4">둥근사각형4</div>
+    <div class="box5">둥근사각형5</div>
+</div>
+<style>
+    /* 후손자방식 */
+    .boxSet {display: flex ;}
+    .boxSet div {width: 200px ; height: 200px;
+    background-color: brown;
+margin-right: 10px; text-align: center;
+padding-top:  80px; box-sizing: border-box;}
+.box1 {border-radius: 30px;}
+.box2 {border-radius: 50%;}
+.box3 {border-radius: 10px 20px 30px 40px;}
+.box4 {border-top-right-radius: 50px;}
+.box5 {border-radius: 30px 70px 15px 70px / 70px 15px 70px 15px}
+
+    /* 자손자방식 */
+    .boxSet>div {}
+</style>
+
+<h4>백그라운드 (배경설정)</h4>
+<p>배경색이나 배경이미지를 삽입할떄 사용한다. 많은 속성들을 한번에
+    기재할수도 있고 별도로 기재할수도 있다. 
+</p>
+<ul>  
+    <li>background-color
+        <ul>
+            <li>영문이름으로작성 : rad,black,white......</li>
+            <li>hex코드작성법 : #ffffff,#000000
+                반복으로 들어갈수록 레드에서 하나 그린에서 하나 블루에서 하나씩 작성가능
+            </li>
+            <li>rgb 수치값작성 : rgb(00,00,00)</li>
+            <li>rgb와 투명도를 같이작성 : rgba(0,200,50,0.5)</li>
+        </ul>
+    </li>
+    <li>background-image : url(이미지경로작성)</li>
+    <li>background-repeat : 배경이미지또는 컬러를 반복한다.
+        <ul>
+            <li>repeat - 가로,세로형으로 모두 패턴처럼 깔림</li>
+            <li>repeat-x - 가로방향으로만 깔림</li>
+            <li>repeat-y - 세로방향으로만 깔림</li>
+            <li>no-repeat - 반복없음</li>
+        </ul>
+    </li>
+    <li>background-size : 배경이미지에 크기를 태그사이즈 대비 변경하고자 할때 사용
+        <ul>
+            <li>contain - 이미지에 비율을 유지하면서 영역을 꽉채움</li>
+            <li>cover - 배경이미지가 짤리더라도 화면의 영역을 꽉채움</li>
+        </ul>
+    </li>
+    <li>background-position : top,center,left 등 위치를 지칭하는
+        단어로도 사용가능하고 숫자와 단위로도 이동가능하다<br>
+        왼쪽상단에서부터 거리가 멀어지고 앞수 오른쪽으로 이동 다음수가
+        아랫쪽으로 이동(20xp 60px)
+    </li>
+    <li>background-attachment : fixed 로 바닥에 붙이는 효과</li>
+</ul>
+<p>그라디언트를 활용하여 배경색 또는 패턴을 제작할수있다.</p>
+<ul>
+    <li>linear-gradient(각도,시작색깔,마지막색깔)</li>
+    <li>redial-gradient(시작색깔,마지막색깔)</li>
+    <li>patten - 직선그라데이션의 수직시작점을
+        % 값으로 잡아 옆에 여백을 만들어 반복시켜적용
+    </li>
+    <li><a href="http://gradienthunt.com">그라디언트헌트바로가기</a></li>
+</ul>
+
+<style>
+    .bg001 {background-color: rgb(255, 00, 0);}
+    .bg002 {background-color: rgba(255, 00, 0, 0.5);}
+    .bg003 {background-image: url(https://post-phinf.pstatic.net/MjAxODAxMDNfMTkg/MDAxNTE0OTQwOTExMzE2.xrXUnUWpJLkKxnPPKO0j5i9oIdfJgSsdg-Rl1tWzm3Eg.Wc9UVWfKdk4P-T4_qZUwFU3Rw97HWDjWAc0X-qgolmAg.JPEG/2015-05-19-10%3B53%3B24.jpg?type=w1200);
+    height: 500px; background-repeat: no-repeat; background-size: contain; background-position: center;}
+    .bg004 {background-image: url(https://img.freepik.com/premium-photo/seascape-in-the-early-morning-sunrise-over-the-sea_416511-5490.jpg);
+    height: 500px; background-repeat: no-repeat; background-size: cover; background-position: right bottom;
+background-attachment: fixed;}
+    .bg005 {background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%, rgba(172,253,163,0.64) 112.1% ); height: 1200px;}
+    .bg005 div{height: 300px;
+    border: 1px solid black;
+    margin-top: 20px;}
+    .bg005 div:nth-child(1) {background: linear-gradient(0deg,#ff0000,#000000);}
+    .bg005 div:nth-child(2) {background-image: radial-gradient(#ffff00,#ff0000);}
+    .bg005 div:nth-child(3) {background: linear-gradient(90deg,#ccc 50% ,#fff 0) 0 0 / 20px 2px repeat;}
+</style>
+<!--background-image: linear-gradient( 64.3deg,  rgba(254,122,152,0.81) 17.7%, rgba(255,206,134,1) 64.7%, rgba(172,253,163,0.64) 112.1% );  -->
+<div class="bg001">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem, magnam laudantium sit debitis accusamus exercitationem eveniet possimus tenetur odio, nisi optio alias temporibus suscipit? Laboriosam eius reprehenderit explicabo alias!
+
+</div>
+
+<div class="bg002">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem, magnam laudantium sit debitis accusamus exercitationem eveniet possimus tenetur odio, nisi optio alias temporibus suscipit? Laboriosam eius reprehenderit explicabo alias!
+    </div>
+    <div class="bg003">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem, magnam laudantium sit debitis accusamus exercitationem eveniet possimus tenetur odio, nisi optio alias temporibus suscipit? Laboriosam eius reprehenderit explicabo alias!
+        </div>
+        <div class="bg004">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem, magnam laudantium sit debitis accusamus exercitationem eveniet possimus tenetur odio, nisi optio alias temporibus suscipit? Laboriosam eius reprehenderit explicabo alias!
+            </div>
+            <div class="bg005">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem, magnam laudantium sit debitis accusamus exercitationem eveniet possimus tenetur odio, nisi optio alias temporibus suscipit? Laboriosam eius reprehenderit explicabo alias!
+                <div>직선형그라디언트</div>
+                <div>방사형그라디언트</div>
+                <div>그라디언트활용패턴</div>
+            </div>
+
 </body>
 </html>
