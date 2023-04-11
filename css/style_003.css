@@ -1,0 +1,66 @@
+/* 유니코드설정 */
+@charset 'utf-8';
+/* 전체설정 */
+* { margin: 0; padding: 10;} 
+    
+.ul,li{list-style: none;}
+    
+    a{text-decoration: none; color: #000;}
+
+    /* 가시속성예제 */
+.layout001 {border: 1px solid #000;
+    padding: 10px;
+margin: 10px;}
+
+.layout001 li {border-bottom: 5px solid yellow;
+margin-bottom: 5px;}
+
+.layout001 li {background-image: linear-gradient(90deg, #ccc 50%, #000 0);
+background-size: 8px;
+background-repeat: no-repeat;
+padding-left: 10px;}
+
+.box001 {background-color: aquamarine;
+padding: 40px;}
+
+
+.box001 span {border: 2px solid #000;
+padding: 20px;}
+
+.box001 span:nth-child(1) {display: inline;}
+.box001 span:nth-child(2) {display: inline-block;}
+.box001 span:nth-child(3) {display: block;}
+
+
+/* float속성 */
+
+.layout002 {border: 1px solid #000;
+    padding: 10px;
+margin: 10px;}
+
+.box002 {background-color: aquamarine;
+    padding: 40px;}
+
+.box002 li{border:  1px solid #000;
+padding:  10px;
+float: left;}
+
+.box002 li:nth-child(5) {float: right;}
+.box002 li:nth-child(4) {float: right;}
+
+.box002:after {content: '';
+display: block;
+clear: both;}
+
+/* flex속성 */
+.box003 {background-color: aquamarine;
+    padding: 40px;
+display: flex;
+justify-content: space-between;
+flex-direction: column-reverse;}
+
+    .box003 li{border:  1px solid #000;
+        padding:  10px;}
+
+
+

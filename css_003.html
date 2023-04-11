@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css레이아웃</title>
+    <!-- 외부 스타일시트연결 -->
+    <link rel="stylesheet" href="/css/style_003.css">
+
+</head>
+<body>
+    <h1>css레이아웃</h1>
+    <p>css를 활용하여 공간을 나누듯 배치를 하기위해 여러속성을 사용한다.</p>
+    <h2>가시속성</h2>
+    <p>display : 태그가 화면에 보이는 방식을 지정한다.</p>
+    <ul class="layout001">
+        <li>none - 화면에서 안보이며 공간도 함께사라진다. 또한 웹접근성으로도 확인할수없다.</li>
+        <li>inline - 특별한 공간의 값을 가지고 있지 않다. width,height등의 값을 지정할수 없다.
+            margin,padding의 경우 요소를 기준으로 하기 때문에 좌우는 적용이되나, 상하는 적용되지 않는다.
+        </li>
+        <li>inline-block - inline과 블럭의 중간역할 두속성의 모든 성질을 가지고있음</li>
+        <li>block - 가로값 화면기준 100%로 적용 / 자동줄바꿈기능이있다.</li>
+
+
+    </ul>
+    <div class="box001">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi id quod repellat fuga facilis, fugit, reprehenderit maxime nisi eum nihil reiciendis mollitia et. Rem minima itaque officia natus dolor ut.
+        <span>inline</span>
+        <span>inline-block</span>
+        <span>block</span>
+    </div>
+
+    <h2>float속성</h2>
+    <p>자동줄바꿈의 성질이 있는 블럭을
+        한줄에 2개이상의 요소를 배치하고자 할떄
+        사용/사전적의미로 물이나 공중에 뜨다 의미로 블럭요소를 강제로 띄워서 화면에 좌우로 배치
+    </p>
+    <ul class="layout002">
+        <li>left : 왼쪽에 요소를 띄워서 나열한다.</li>
+        <li>right : 오른쪽에 요소를 띄워서 나열한다.</li>
+    </ul>
+
+
+    <ul class="box002">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+
+
+
+    <h2>flex속성</h2>
+    <p>태그를 수평,수직으로 자유롭고 유연하게 변동할수 있는 기능</p>
+    <ul>
+        <li>container - 부모요소를 부르는 명칭으로 사용</li>
+        <li>items - 자식요소를 부르는 명칭으로 사용</li>
+    </ul>
+
+
+    <p>container속성 에는 <b>display</b>, flex-flow(묶음기능), flex-derection(수평,수직)
+    <b>justify-content(아이템수평정렬)</b>,<b>aline-items(아이템수직정렬)</b></p>
+    <p>items속성에는 flex,grow(증가너비),shing(감소너비),bassis(크기배분),align-seif(각자조정)</p>
+    <p>자손자에만 오롯이 적용된다. 후손자 적용안됨</p>
+    
+    <ul class="box003">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+</html>
