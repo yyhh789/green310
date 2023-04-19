@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃004</title>
+    <link rel="stylesheet" href="/css/grid-guide.css">
+</head>
+<body>
+    <div class="box1">
+    <div class="box1-1">로고</div>
+    <div class="box1-2">메뉴</div>
+</div>
+    <div class="box2">이미지슬라이드</div>
+    <div class="box3">
+    <div class="box3-1">공지사항</div>
+    <div class="box3-2">배너</div>
+    <div class="box3-3">바로가기</div>
+</div>
+    <div class="box4">
+    <div class="box4-1">하단로고</div>
+    <div class="box4-2">
+        <div class="box4-01">하단메뉴</div>
+        <div class="box4-02">copyright</div>
+    </div>
+    </div>
+    
+
+
+
+
+    <style>
+        .box1 {display: flex;}
+        .box1-1 {width: 20%; }
+        .box1-2 {width: 80%; }
+
+        .box3 {display: flex;}
+        .box3 div{flex-grow: 1;}
+
+        .box4 {display: flex;}
+
+        .box4-1 {width: 30%;}
+        .box4-2 {width: 70%;}
+
+</style>
+
+
+
+<!-- 부모자after 정렬 float:left 사용 -->
+
+<!-- 박스A 설정 -->
+<style>
+    .boxA::after {content: "";
+        display: block;
+        clear: both;}
+        .box1 {float: left; width: 20%;}
+        .box2 {float: left; width: 80%;}
+        /* 박스C 설정 */
+        .boxC::after{content: "";
+        display: block;
+        clear: both;}
+        .boxC div {float: left;
+        width: 33.3333%;}
+        /* 박스D 설정 */
+        .boxD {height: 450px;}
+        .boxD:after {content: "";
+        display: block;
+        clear: both;}
+        .box6 {float : left;width: 20%; height: 100%;}
+        .box7 {float:  left; width: 80%; height: 100%;}
+</style>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃003</title>
+    <link rel="stylesheet" href="css/grid-guide.css">
+</head>
+<body>
+
+    <div class="boxA">header</div>
+
+<div class="boxB">nav</div>
+
+<div class="boxC">
+    
+    <div class="box1">
+    <div class="box1-1">section</div>
+    <div class="box1-2">article</div>    
+    </div>
+    
+    <div class="box2">aside</div>
+</div>
+
+<div class="boxD">footer</div>
+
+
+<style>
+    /* 박스c 설정 */
+    /* 부모에 after 정렬 float : laft를 사용 */
+
+    .boxC::after {content: "";
+    display: block;
+    clear: both;}
+
+    .box1 {float: left; width: 70%;}
+    .box2 {float: left; width: 30%;}
+
+    /* flex 설정 */
+
+    .boxC {display: flex;
+        align-items: start;}
+    .box1{ width: 70%;}
+    .box2{ width: 30%;}
+
+
+
+</style>
+</body>
+</html>

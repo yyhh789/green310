@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃001</title>
+    <!-- 그리드가이드연결 -->
+    <link rel="stylesheet" href="/css/grid-guide.css">
+    <!-- 그리드 가이드 사용법 
+    1.클래스이름을 활용한다.
+    2.클래스이름은 box+숫자로 표기한다.
+    ex)box1,box001 / boxA,boxB
+    3.형제자와 부모자,자손자 의 박스컬러가 다르다.
+    4.기본속성값을 모두 잃는다.
+    5.클래스명 box 내부에 자손자 박스의 요소는 적용되지 않는다.-->
+</head>
+<body>
+
+    <div class="boxH">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+    </div>
+    <div class="box3">box3</div>
+
+    <section class="boxA">
+        <article class="box001">box001</article>
+        <article class="box002">box002</article>
+    </section>
+    
+    <footer class="boxB">푸터</footer>
+
+    <style>
+        body {margin: 0;}
+        /* boxH 설정 */
+        .box1 {width: 20%;
+            float: left;}
+        .box2 {width: 80%;
+            float: left;}
+    .boxH:after {content: "";
+        display: block;
+    clear: both;}
+        /* boxA */
+    .box001 {width: 50%;
+            float: left;}
+        .box002 {width: 50%;
+            float: left;}
+    .boxA::after {content: "";
+        display: block;
+    clear: both;}
+    </style>
+
+    <h2>flex를 활용한 레이아웃</h2>
+    <div class="boxH-1">
+        <div class="box1-1">box1-1</div>
+        <div class="box2-1">box2-1</div>
+    </div>
+
+    <div class="box3-1">box3-1</div>
+    <div class="boxA-1">
+        <div class="box001-1">box001-1</div>
+        <div class="box002-1">box002-1</div>
+    </div>
+
+    <div class="boxB-1">footer</div>
+
+    <style>
+        /* boxH-1 설정 */
+        .boxH-1 {display: flex;}
+        .box1-1 {width: 20%;}
+        .box2-1 {width: 80%;}
+
+        .boxA-1 {display: flex;}
+        .box001-1 {width: 50%;}
+        .box002-1 {width: 50%;}
+    </style>
+</body>
+</html>

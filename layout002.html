@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃002</title>
+    <link rel="stylesheet" href="/css/grid-guide.css">
+</head>
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">
+        <div class="box2-1">박스2-1</div>
+        <div class="box2-2">박스2-2</div>
+    </div>
+    
+
+    <style>
+        .box2 {display: flex;}
+        .box2-1 {width: 50%;}
+        .box2-2 {width: 50%;}
+    </style>
+
+    <div class="box3">박스3</div>
+
+    <div class="box4">
+        <div class="box4-1">박스4-1</div>
+    <div class="box4-2">박스4-2</div>
+    <div class="box4-3">박스4-3</div>
+</div>
+
+<style>
+    .box4 {display: flex;}
+        .box4-1 {width: 20%;}
+        .box4-2 {width: 60%;}
+        .box4-3 {width: 20%;}
+</style>
+
+
+<div class="boxA">박스1</div>
+<div class="boxB">
+    <div class="box2-1">박스2-1</div>
+    <div class="box2-2">박스2-2</div>
+</div>
+<div class="boxC">박스3</div>
+<div class="boxD"><div class="box4-1">박스4-1</div>
+<div class="box4-2">박스4-2</div>
+<div class="box4-3">박스4-3</div></div>
+
+<style>
+    /* 박스B설정 */
+    /* 부모자after 정렬방식 float:left 활용 */
+    .boxB::after{content: "";
+    display: block;
+    clear: both;}
+    .box2-1 {width: 50%;
+    float: left;}
+    .box2-2 {width: 50%;
+    float: left;}
+
+    /* 박스D설정 */
+    .boxD::after {content: "";
+    display: block;
+    clear: both;}
+    .box4-1 {width: 20%;
+    float: left;}
+    .box4-2 {width: 60%;
+    float: left;}
+    .box4-3 {width: 20%;
+    float: left;}
+
+    /* 부모자에 flex 방식 */
+    
+    /* 박스B 설정 */
+
+    .boxB {display: flex;}
+    .boxb {flex-grow: 1;}
+
+    /* 박스D 설정 */
+
+    .boxD {display: flex;}
+    .box4-1 {width: 20%;}
+    .box4-2 {width: 60%;}
+    .box4-3 {width: 20%;}
+</style>
+
+</body>
+</html>
