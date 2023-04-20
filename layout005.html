@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃005</title>
+</head>
+<link rel="stylesheet" href="css/grid-guide.css">
+<body>
+    <div class="box1">
+                <div class="box1-1">
+            <div class="box1-01">1</div>
+            <div class="box1-02">2</div> 
+            <div class="box1-03">3</div>
+            <div class="box1-04">4</div> 
+        </div>
+        <div class="box1-2">1</div>
+
+    </div>
+    <div class="box2">2</div>
+    <div class="box3">
+        <div class="box3-1">1</div>
+        <div class="box3-2">2</div>
+        <div class="box3-3">3</div>
+        <div class="box3-4">4</div>
+    </div>
+    <div class="box4">
+        <div class="box4-1">1</div>
+        <div class="box4-2">2</div>
+        <div class="box4-3">3</div>
+    </div>
+    
+    <style>
+        .box1 {display: flex;height: 100%;}
+        .box1-1 {width: 40%;}
+        .box1-2 {width: 60%; height: 25%;}
+
+        .box3 {display: flex;}
+        .box3-1 {width: 25%;}
+        .box3-2 {width: 25%;}
+        .box3-3 {width: 25%;}
+        .box3-4 {width: 25%;}
+
+        .box4 {display: flex;}
+        .box4-1 {width: 33.3333%;}
+        .box4-2 {width: 33.3333%;}
+        .box4-3 {width: 33.3333%;}
+    </style>
+
+
+
+
+<div class="boxA">
+    <div class="boxA-1">
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+</div>
+    <div class="boxA-2">박스5</div>
+</div>
+<div class="boxB">박스6</div>
+<div class="boxC">
+    <div class="box7">박스7</div>
+    <div class="box8">박스8</div>
+    <div class="box9">박스9</div>    
+    <div class="box10">박스10</div>
+</div>
+<div class="boxD">
+
+    <div class="box11">박스11</div>
+    <div class="box12">박스12</div>
+    <div class="box13">박스13</div>
+</div>
+
+
+<style>
+    /* flex기반 가로정령 */
+    /* 박스A설정 */
+    .boxA {display: flex;
+    align-items: flex-start;}
+    .boxA-1 {width: 30%;}
+    .boxA-2 {width: 70%;}
+    /* 박스C설정 */
+    .boxC {display: flex;}
+    .boxC div{flex-grow: 1;}
+    /* 박스D설정 */
+    .boxD {display: flex;}
+    .boxD div {flex-grow: 1;}
+
+
+    /* 부모자 after 설정 float : left 사용 */
+/* 박스A설정 */
+
+        /* .boxA:after {content: "";
+    display: block;
+clear: both;}
+    
+    .boxA-1 {float: left; width: 30%;}
+    .boxA-2 {float: left; width: 70%;} */
+
+/* 박스C설정 */
+/* .boxC:after {content: "";
+    display: block;
+clear: both;}
+
+.boxC div {float: left;
+width: 25%;} */
+
+/* 박스D설정 */
+/* .boxD:after {content: "";
+    display: block;
+clear: both;}
+.box div {float: left; width: 33.3333%;} */
+</style>
+
+</body>
+</html>
