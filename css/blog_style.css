@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* 전체설정 */
+*{margin: 0;padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: black;}
+
+
+body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
+
+/* 박스3번과 박스4의 가로정렬 */
+.boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
