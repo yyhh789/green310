@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Jua&family=Paytone+One&display=swap');
 /* 전체설정 */
 *{margin: 0;padding: 0;}
 ul,ol {list-style: none;}
@@ -18,8 +18,11 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 /* 로고설정 */
 
 .logo {}
-.logo h1 {font-weight: bold; font-size: 30px;}
-.logo h1 a {}
+.logo h1 {font-weight: normal; font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Paytone One', sans-serif;}
+.logo h1 a {color: #83a4a8;}
 
 /* 메뉴설정 */
 .menu {}
@@ -32,12 +35,35 @@ font-size: 14px;}
 
 /* 기사설정 */
 .story {}
-.story h1 { font-size: 36px; margin bottom: : 20px; max-width: 100%;}
+.story h1 { font-size: 36px; margin-bottom:20px; max-width: 100%;}
 .story  img { width: 100%;}
 .story p {margin-bottom: 20px;
 margin-top: 10px;}
 .story h2 {margin-top: 40px; border-left: 10px solid #7cbac1; padding-left: 10px;
 font-weight: normal;}
+
+
+/* 기사의작성일설정 */
+.storyinfo {margin-top: -10px; margin-bottom: 20px;}
+.storyinfo i {color: #aaa;
+                font-size: 18px;}
+.storyinfo time {}
+
+
+/* 기사의 카테고리 설정*/
+.story-cat {margin-bottom: 25px;}
+.story-cat ul {display: flex;}
+.story-cat ul li {margin-right: 5px;}
+.story-cat ul li a {margin-top: 20px;
+    background-color: #75dbe7;
+font-size: 12px; color: white;
+padding:3px 5px; display: block;
+border-radius: 2px;
+}
+
+
+
+
 
 /* 특집기사설정 */
 .sidemenu {margin-bottom: 30px;}
@@ -48,15 +74,27 @@ font-weight: normal;}
 .sidemenu ul li a {display: block; padding: 5px;
 font-size: 14px;}
 
+.sidemenu i{color: #000;
+margin-right: 5px;}
+
 
 /* 추천기사설정 */
 .recommend {margin-bottom: 30px;}
 .recommend h1{font-weight: bold; font-size: 18px; color: #666; 
     border-bottom: dotted 2px #ddd; margin-bottom: 10px;}
 .recommend ul{}
-.recommend ul li {}
-.recommend ul li a {display: block; padding: 5px;
-font-size: 14px;}
+.recommend ul li {margin-bottom: 10px;}
+.recommend ul li a {display: block; 
+font-size: 14px;
+position: relative;}
+
+.recommend img {width: 100%;vertical-align: top;}
+.recommend .txt{background-color: rgb(0,0,0,0.5); color: #fff; padding: 5px 10px;
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+box-sizing: border-box;}
 
 
 

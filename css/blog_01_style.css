@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 *{margin: 0; padding: 0;}
 ul,ol {list-style: none;}
 a {text-decoration: none; color: black;}
@@ -10,6 +10,8 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 .box3 {width: 70%;}
 .box4 {width: 30%;}
 
+.box1 h1 {font-family: 'Paytone One', sans-serif; font-size: 30px;
+color: aquamarine;}
 
 /* 박스2설정 */
 .box2 {background-color: aquamarine;}
@@ -25,19 +27,39 @@ body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 font-weight: normal;}
 .box3 p {margin-bottom: 20px;margin-top: 10px}
 
+.box3 ul {display: flex;}
+.box3 a {
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    display: block;
+    background-color: aquamarine; 
+    display: block; 
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;}
+    
+    .storyinfo {font-size: 20px; color: #666;padding-bottom: 20px;}
+
 /* 박스4 */
 .box4-1 {margin-bottom: 30px;}
-.box4-1 h1 {font-weight: bold; font-size: 30px; color: #555;
+.box4-1 h1 {font-weight: bold; font-size: 20px; color: #555;
 border-bottom:dotted 2px #111; margin-bottom:10px}
 .box4-1 div a p {display: block; padding: 5px; font-size: 14px;}
 
+.box4-1 li {padding: 5px;}
+.box4-1 li a i {padding-right: 5px;}
+
+
+
+
 .box4-2 {margin-bottom: 30px;}
-.box4-2 h1 {font-weight: bold; font-size: 30px; color: #555;
+.box4-2 h1 {font-weight: bold; font-size: 20px; color: #555;
 border-bottom:dotted 2px #111; margin-bottom:10px}
 .box4-2 div a p {display: block; padding: 5px; font-size: 14px;}
 
 .box4-3 {margin-bottom: 30px;}
-.box4-3 h1 {font-weight: bold; font-size: 30px; color: #555;
+.box4-3 h1 {font-weight: bold; font-size: 20px; color: #555;
 border-bottom:dotted 2px #111; margin-bottom:10px}
 .box4-3 div a p {display: block; padding: 5px; font-size: 14px;}
 
@@ -62,5 +84,5 @@ border-bottom:dotted 2px #111; margin-bottom:10px}
 box-sizing: border-box;}
 
 
-.box1,.boxA,.box2,.copyright{width: 1000px; margin: 0 auto;}
+.box1,.boxA,.copyright,.box2 ul{width: 1000px; margin: 0 auto;}
 
