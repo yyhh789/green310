@@ -4,6 +4,7 @@
 *{margin: 0;padding: 0;}
 ul,ol {list-style: none;}
 a {text-decoration: none; color: black;}
+img {border: none; vertical-align: bottom;}
 
 
 body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
@@ -60,9 +61,38 @@ font-size: 12px; color: white;
 padding:3px 5px; display: block;
 border-radius: 2px;
 }
+/*  sns공유설정 */
+.snsSet  {margin-top:40px ;}
+.snsSet  ul {display: flex;}
+.snsSet  ul li { width: 33.333333%;}
+.snsSet ul li a {display: block; text-align: center; padding: 5px; font-size: 14px;color: white;}
+
+.snsSet li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet li:nth-child(2) a {background-color: #1877f2;}
+.snsSet li:nth-child(3) a {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#405de6+0,c13584+29,fd1d1d+55,ffdc80+100 */
+    background: #405de6; /* Old browsers */
+    background: -moz-linear-gradient(left,  #405de6 0%, #c13584 29%, #fd1d1d 55%, #ffdc80 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #405de6 0%,#c13584 29%,#fd1d1d 55%,#ffdc80 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #405de6 0%,#c13584 29%,#fd1d1d 55%,#ffdc80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#405de6', endColorstr='#ffdc80',GradientType=1 ); /* IE6-9 */
+    }
+
+/* https://brandcolors.net/  브랜드 컬러 검색*/
+/* https://css3generator.com/  그라데이션*/
 
 
-
+/* 관련기사설정 */
+.ralation {background-color: #f0f064;
+padding: 20px;
+margin-top: 40px;}
+.ralation h1 {color: #727224;
+font-size: 20px;
+font-weight: normal;
+margin-bottom: 5px;}
+.ralation ul {display: flex;}
+.ralation ul li {width: 50%;}
+.ralation ul li a {display: block; padding: 5px; font-size: 14px;} 
+.ralation img { width: 100%;}
 
 
 /* 특집기사설정 */
@@ -98,14 +128,31 @@ box-sizing: border-box;}
 
 
 
-/* 추천기사설정 */
+/* 인기기사설정 */
 .popular {}
 .popular h1{font-weight: bold; font-size: 18px; color: #666; 
     border-bottom: dotted 2px #ddd; margin-bottom: 10px;}
 .popular ul{}
 .popular ul li {}
 .popular ul li a {display: block; padding: 5px;
-font-size: 14px;}
+font-size: 14px; border-bottom: dotted #ddd;
+color: #2288dd;}
+
+
+.popular a:after {content: "";
+display: block;
+clear: both;}
+.popular img {border: none;
+float: left;
+width: 60px;}
+.popular .txt {float: none; width: auto;
+padding-left: 15px;
+margin-left: 60px;}
+.popular span {
+    display: block;
+    color: #666; font-size: 12px;}
+
+
 
 
 

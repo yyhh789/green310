@@ -23,12 +23,12 @@ color: aquamarine;}
 /* 박스3설정 */
 .box3 h1 {max-width: 100%; font-size: 36px; margin-bottom: 20px;}
 .box3 img{width: 100%;}
-.box3 h2 {margin-top: 40px;border-left:10px solid #addada; padding-left: 10px;
+.box3-2 h2 {margin-top: 40px;border-left:10px solid #addada; padding-left: 10px;
 font-weight: normal;}
 .box3 p {margin-bottom: 20px;margin-top: 10px}
 
 .box3 ul {display: flex;}
-.box3 a {
+.box3-1 a {
     margin-top: 10px;
     margin-right: 5px;
     margin-bottom: 10px;
@@ -40,6 +40,39 @@ font-weight: normal;}
     border-radius: 5px;}
     
     .storyinfo {font-size: 20px; color: #666;padding-bottom: 20px;}
+    
+
+
+    .set {}
+    .set ul {display:flex; }
+    .set ul li {width: 33.3333%;text-align: center;padding: 10px;}
+    .set ul li a{font-size: 14px; color: white; width: 33.3333%;}
+    .set li:nth-child(1) {background-color: #1da1f2;}
+    .set li:nth-child(2) {background-color: #1877f2;}
+    .set li:nth-child(3) {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#405de6+0,c13584+29,fd1d1d+55,ffdc80+100 */
+        background: #405de6; /* Old browsers */
+        background: -moz-linear-gradient(left,  #405de6 0%, #c13584 29%, #fd1d1d 55%, #ffdc80 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #405de6 0%,#c13584 29%,#fd1d1d 55%,#ffdc80 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #405de6 0%,#c13584 29%,#fd1d1d 55%,#ffdc80 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#405de6', endColorstr='#ffdc80',GradientType=1 ); /* IE6-9 */
+        }
+
+
+
+        .set1{padding: 20px;
+            margin-top: 40px;
+            background-color: #ffdc80;}
+        .set1 h2{font-weight: normal; color: #232323;margin-bottom: 5px;}
+        .set1 ul {display: flex;}
+        .set1 ul li {width: 25%;}
+        .set1 ul li a {display: block; font-size: 14px; padding: 5px;}
+        .set1 img {width: 100%;}
+
+
+
+
+
+
 
 /* 박스4 */
 .box4-1 {margin-bottom: 30px;}
