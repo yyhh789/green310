@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*{margin: 0;padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {border: none; vertical-align: bottom;}
+body {font-family: 'Poiret One', cursive; font-size: 14px/1.6; color: #555;}
+
+
+header {display: flex;
+    width: 15%; 
+    height: 100vh; 
+    background-color: aqua;
+position: relative;}
+header h1 {position: absolute;
+left: 20%;
+top:10%}
+header ul {position: absolute;
+left: 30%;
+top:40%;}
+header li {padding: 10px 10px;}
+
+.snsSet {display: flex;}
+.snsSet a:nth-child(1) { position: absolute;
+bottom: 80px;
+left: 25%;}
+.snsSet a:nth-child(2) { position: absolute;
+    bottom: 80px;
+    left: 45%;}
+.snsSet a:nth-child(3) {}
+.snsSet a:nth-child(4) {}
+.snsSet a:nth-child(5) {}
+
+

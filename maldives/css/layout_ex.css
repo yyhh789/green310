@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+/* 전체설정 */
+*{margin: 0; padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: #555;}
+img {border: none; vertical-align: bottom;}
+
+body {font: 12px/1.6 'Poiret One', cursive;
+color: #555;}
+
+/* 레이아웃 */
+header {background-color: aqua; width: 15%; height: 100%;
+position: fixed;}
+nav {background-color: #212121; width: 85%; height: 35px;
+    margin-left: 15%;}
+section { width: 85%; 
+    margin-left: 15%;}
+article {float: left; width: 20%; height: 260px;}
+/* article 박스 크기 각자 지정 */
+article:nth-child(1) {background-color: #ddd;
+width: 60%; height: 520px;}
+article:nth-child(2) {background-color: #ccc;
+width: 40%;}
+article:nth-child(3) {background-color: #bbb;}
+article:nth-child(4) {background-color: #aaa;}
+article:nth-child(5) {background-color: #999;}
+article:nth-child(6) {background-color: #888;
+width: 40%;}
+article:nth-child(7) {background-color: #777;}
+article:nth-child(8) {background-color: #666;}
+article:nth-child(9) {background-color: #555;
+width: 40%;}
+article:nth-child(10) {background-color: #444;}
+article:nth-child(11) {background-color: #333;}
+article:nth-child(12) {background-color: #222;}
