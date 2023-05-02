@@ -6,9 +6,6 @@ a {text-decoration: none; color: black;}
 
 body {font-family: '맑은 고딕','Apple SD Gothic Neo',sans-serif;}
 
-.boxA {display: flex;}
-.box3 {width: 70%;}
-.box4 {width: 30%;}
 
 .box1 h1 {font-family: 'Paytone One', sans-serif; font-size: 30px;
 color: aquamarine;}
@@ -32,7 +29,6 @@ font-weight: normal;}
     margin-top: 10px;
     margin-right: 5px;
     margin-bottom: 10px;
-    display: block;
     background-color: aquamarine; 
     display: block; 
     color: #fff;
@@ -89,7 +85,16 @@ border-bottom:dotted 2px #111; margin-bottom:10px}
 .box4-2 {margin-bottom: 30px;}
 .box4-2 h1 {font-weight: bold; font-size: 20px; color: #555;
 border-bottom:dotted 2px #111; margin-bottom:10px}
-.box4-2 div a p {display: block; padding: 5px; font-size: 14px;}
+.box4-2 a {display: block; 
+    font-size: 14px;
+    position: relative;}
+.box4-2 .txt {background-color: rgb(0,0,0,0.5); color: #fff; padding: 5px 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;}
+.box4-2 img {width: 100%;vertical-align: top;}
 
 .box4-3 {margin-bottom: 30px;}
 .box4-3 h1 {font-weight: bold; font-size: 20px; color: #555;
@@ -116,6 +121,42 @@ border-bottom:dotted 2px #111; margin-bottom:10px}
 .box3 {padding-right: 20px;
 box-sizing: border-box;}
 
+.box1.boxA.box4.copyright {padding-left: 10px; padding-right: 10px;}
 
-.box1,.boxA,.copyright,.box2 ul{width: 1000px; margin: 0 auto;}
+
+/* 1.모바일 구간  */
+@media (max-width:600px)
+{
+
+}
+
+/* 2.태블릿이하 구간  */
+@media (min-width:601px) and (max-width:767px)
+{
+    .box4 {display: flex;}
+    .box4-01 {width: 50%;}
+    .box4-02 {width: 50%;}
+    .box1,.boxA,.box,.copyright {padding-left: 10px;
+        padding-right: 10px;}
+}
+
+/* 3.태블릿이상~데스크탑구간 */
+@media (min-width:768px)
+{
+    .boxA {display: flex;}
+    .box3 {width: 70%;}
+    .box4 {width: 30%;}
+    .box1,.boxA,.box,.copyright {padding-left: 10px;
+        padding-right: 10px;}
+}
+
+/* 4.일정구간사이즈고정값구간 */
+@media (min-width:1040px)
+{
+    .boxA {display: flex;}
+.box3 {width: 70%;}
+.box4 {width: 30%;}
+    .box1,.boxA,.copyright,.box2 ul{width: 1000px; margin: 0 auto;}
+}
+
 

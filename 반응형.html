@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹설정</title>
+</head>
+<body>
+    <h1>반응형웹을 위한 설정</h1>
+    <p>반응형웹은 웹페이지 하나로 데스크탑,태블릿,스마트폰에 맞게 디자인이 자동으로
+        반응해서 변경되는 웹페이지를 의미함
+    </p>
+    <p>
+        <strong>
+            반응협웹페이지는 미디어쿼리를 사용해서 개발함
+        </strong>
+        
+        <h2>
+            미디어쿼리란?
+        </h2>
+    </p>
+    <p>웹페이지에 표지되는 장치에 @media 라는 스타일시트 작업을 통해
+        구간을 설정하고 각 구간별 제시되는 속성값을 사용하게 됨을 의미함
+    </p>
+
+    <p>min-width : 숫자px 은 최소가로값을 의미하여 지정된 숫자보다 가로값이 커지는 경우를 나타냄<br>
+    max-width : 숫자px 는 최대가로값을 의미하여 지정된 숫자보다 가로값이 작아지는 경우를 나타냄 <br>
+사이구간을 나타낼시 min 과 max 값 사이에 and를 사용
+<em>and 앞뒤는 띄어쓰기가 필수</em></p>
+<ul>
+    <li>모바일구간 - 600px이하 구간을 모두다 모바일 구간으로 보고375이하는 추가설정한다</li>
+    <li>태블릿구간 - 768px 이하 600이상으로 설정하거나
+        601px이상부터 1024이하 구간으로 설정한다
+    </li>
+    <li>1025px 이상구간부터 설정하되 네이버처럼 일정구간이 되었을때는 더이상
+        크기가 커지지 않게 가로값을 지정한다.
+    </li>
+</ul>
+
+
+
+
+    <style>
+        body {background-color: rgb(151, 32, 82);}
+        @media (max-width:600px) 
+        {h1 {font-size: 20px;}
+        body {background-color: aqua;}
+        }
+        @media (min-width:601px) and (max-width: 700px)
+        { 
+            body {background-color: rgb(72, 150, 89);}
+            h1 {font-size: 50px;}
+        }
+    </style>
+</body>
+</html>
