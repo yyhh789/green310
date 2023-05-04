@@ -1,1 +1,11 @@
 @charset "UTF-8";
+
+
+.snsSet {position: absolute;
+    bottom: 50px;
+width: 90px;
+height: 47px;
+right: 50%;
+margin-right: -45px;}
+.snsSet a {float: left;
+    }

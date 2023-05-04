@@ -1,13 +1,11 @@
-
 /* 스타일 CSS*/
-
 @charset 'UTF-8';
 
 
 /* header콘텐츠 */
-header {}
+
 header h1 {position: absolute;
-        width: 180px;
+       width: 180px;
         height: 136px;
         background-image: url(../img/logo1.png);
         text-indent: -9999px;
@@ -19,7 +17,7 @@ background-repeat: no-repeat;
 }
 .gnb {position: absolute;
     top: 300px;
-    right:50%;}
+    right: 40px;}
 .gnb li {}
 .gnb li a {display: block;
         padding: 8px 30px;
@@ -32,7 +30,7 @@ text-align: left;}
         bottom: 50px;
     width: 90px;
     height: 47px;
-right: 50%;;
+right: 50%;
 margin-right: -45px;}
 .snsSet a {float: left;
         }
@@ -55,142 +53,243 @@ nav a:nth-child(4) {position: absolute;
 right: 10px;}
 
 
-/* 미디어쿼리구간 */
-/* 2. 480~639 까지 구간 */
-@media (min-width:480px) and (max-width:639px)
-{
-    /* header콘텐츠 */
-    header {}
-    header h1 {width: 200px;
-            height: 40px;
-            background-image: url(../img/logo2.png);
-            left: 50%;
-            margin-left: -100px;
-        top: 20px;}
+/* 아티클내부설정 */
+article>div {width: 100%;
+            height: 100%;
+            position: relative;}
+
+ /* 배경이미지삽입구간설정 */
+
+ article .bg {background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                overflow: hidden;}
+ article .bg1 {background-image: url(../img/pic1.jpg);}
+ article .bg2 {background-image: url(../img/pic2.jpg);}
+ article .bg3 {background-image: url(../img/pic3.jpg);}
+ article .bg4 {background-image: url(../img/pic4.jpg);}
+ article .bg5 {background-image: url(../img/pic5.jpg);}
+ article .bg6 {background-image: url(../img/pic6.jpg);}
+ article .bg7 {background-image: url(../img/pic7.jpg);}
+
+ article .bg span {font-size: 60px;
+                color: #fff;
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            transform: scale(10);
+        opacity: 0;
+        transition:all 0.6s ;}
+
+        /* transition 이란?? 서서히변화하라 라는 명령어로 
+        속성명으로 하나하나 지시하거나, 
+        모든속성을 불러 지시한다. 
+        또한 움직이는 속도를 초단위로 표시한다.
+        시작을 알리는 선택자에 넣는다.
+        hover 값의 동적인 요소를 만들때 사용한다. */
+
+            article .bg:hover span {transform: scale(1);
+            opacity: 1;}
+
+/* 텍스트영역설정 */
+
+article .txt {color: #6666;
+            background-color: #fff;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            transition: background-color 1s;}
+
+article .txt:hover {background-color:#6ce2fb;
+                    color: #fff;}
+
+article .txt strong {display: block;
+                    font-size: 30px;}
+article  .txt em {}
+
+article:nth-child(3) .txt {background-color: #bff7fa;}
+/* txt중에서 .txt2의 이름을 갖고있는 선택자 */
+article .txt.txt2 {background-color: #e3f1fb;}
+
+article .txt i {position: absolute;
+    font-size: 220px;
+    color: #b2effc;
+right: -550px;
+transition: all 0.7s;
+z-index: 0;}
+article p {z-index: 10  ;
+            position: relative;}
+article:nth-child(3) i {right: 20px;}
 
 
-    .gnb {top: 80px;
-        right: 0px;
-    width: 100%;}
-    .gnb li {float: left;
-    width: 25%;
-text-align: center;}
-    .gnb li a {display: block;
-        padding: 4px 4px;
-    font-size: 17px;
+article .txt:hover i {right: 0;}
+
+
+/* 미디어쿼리구간//////////////////////////////////////////////// */
+/* 2.480 ~ 639까지구간 */
+@media(min-width:480px) and (max-width:639px) {
+
+
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+     height: 40px;
+     background-image: url(../img/logo2.png);
+     left: 50%;
+     margin-left:-100px;
+ top: 20px;
+}
+.gnb {
+ top: 80px;
+right:00px;
+width: 100%;}
+.gnb li {float: left;
+        width: 25%;}
+.gnb li a {display: block;
+    padding: 4px 4px;
+font-size: 17px;
 font-weight: bold;
-text-align: left;}
-    
-    
-    .snsSet {display: none;
-            bottom: 20px;
-        width: 90px;
-        height: 47px;
-    right: 40px;
-    margin-right: 0;}
-    .snsSet a {float: left;}
+text-align: center;}
+
+
+.snsSet { display: none;
+     bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
 }
 
 /* 3.640~779 까지구간 */
-@media (min-width:640px) and (max-width:779px)
-{
-    /* header콘텐츠 */
-    header {}
-    header h1 {width: 200px;
-            height: 40px;
-            background-image: url(../img/logo2.png);
-            left: 20px;
-            margin-left:0;
-        top: 20px;}
+@media(min-width:640px) and (max-width:779px) {
 
 
-    .gnb {top: 20px;
-        right: 40px;}
-    .gnb li {float: left;}
-    .gnb li a {display: block;
-        padding: 8px 10px;
-    font-size: 17px;
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+     height: 40px;
+     background-image: url(../img/logo2.png);
+     left: 20px;
+     margin-left:0;
+ top: 20px;
+}
+.gnb {
+ top: 20px;
+right:40px}
+.gnb li {float: left;}
+.gnb li a {display: block;
+    padding: 8px 10px;
+font-size: 17px;
 font-weight: bold;
 text-align: left;}
+
+
+.snsSet { display: none;
+     bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
     
-    
-    .snsSet {display: none;
-            bottom: 20px;
-        width: 90px;
-        height: 47px;
-    right: 40px;
-    margin-right: 0;}
-    .snsSet a {float: left;}
 }
-/* 4. 789~1023 까지 구간 */
-@media (min-width:789px) and (max-width:1023px)
-{
-    /* header콘텐츠 */
-    header {}
-    header h1 {width: 200px;
-            height: 40px;
-            background-image: url(../img/logo2.png);
-            left: 20px;
-            margin-left:0;
-        top: 20px;}
-    .gnb {top: 20px;
-        right: 40px;}
-    .gnb li {float: left;}
-    
-    
-    .snsSet {display: none;
-            bottom: 20px;
-        width: 90px;
-        height: 47px;
-    right: 40px;
-    margin-right: 0;}
-    .snsSet a {float: left;}
+
+
+
+
+/* 4.780 ~1023  까지 구간 ////////////////*/
+@media(min-width:780px) and (max-width:1023px) {
+
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+     height: 40px;
+     background-image: url(../img/logo2.png);
+     left: 20px;
+     margin-left:0;
+ top: 20px;
 }
-/* 5. 1024~1279 까지 구간 */
-@media (min-width:1024px) and (max-width:1279px)
-{
-    /* header콘텐츠 */
-header {}
-header h1 {width: 200px;
-        height: 40px;
-        background-image: url(../img/logo2.png);
-        left: 20px;
-        margin-left:0;
-    top: 20px;}
-.gnb {top: 20px;
-    right: 40px;}
+.gnb {
+ top: 20px;
+right:40px}
 .gnb li {float: left;}
 
 
-.snsSet {display: none;
-        bottom: 20px;
-    width: 90px;
-    height: 47px;
-right: 40px;
-margin-right: 0;}
-.snsSet a {float: left;}
+
+.snsSet { display: none;
+     bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+    
 }
-/* 6.1280~1599  까지 구간 */
-@media (min-width:1280px) and (max-width:1599px)
-{
-    /* header콘텐츠 */
-header {}
-header h1 {width: 200px;
-        height: 40px;
-        background-image: url(../img/logo2.png);
-        left: 20px;
-        margin-left:0;
-    top: 20px;}
-.gnb {top: 20px;
-    right: 200px;}
+
+
+
+
+
+/* 5.1024~1279 까지 구간 */
+@media(min-width:1024px) and (max-width:1279px) {
+
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+     height: 40px;
+     background-image: url(../img/logo2.png);
+     left: 20px;
+     margin-left:0;
+ top: 20px;
+}
+.gnb {
+ top: 20px;
+right:40px}
 .gnb li {float: left;}
 
 
-.snsSet {position: absolute;
-        bottom: 20px;
-    width: 90px;
-    height: 47px;
-right: 40px;
-margin-right: 0;}
-.snsSet a {float: left;}
+
+.snsSet { display: none;
+     bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+
+
+}
+
+
+
+/* 6.1280~ 1599 까지 구간//////////////////////// */
+@media(min-width:1280px) and (max-width:1599px){
+
+/* header콘텐츠 */
+
+header h1 {position: absolute;
+    width: 200px;
+     height: 40px;
+     background-image: url(../img/logo2.png);
+     left: 20px;
+     margin-left:0;
+ top: 20px;
+}
+.gnb {
+ top: 20px;
+right:200px}
+.gnb li {float: left;}
+
+
+
+.snsSet {
+     bottom: 20px;
+right:40px;
+margin-right: 0px;}
+
+
+
 }
