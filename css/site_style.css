@@ -1,0 +1,132 @@
+@charset 'UTF-8';
+/* 전체설정 */
+*{padding: 0;margin: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: black;}
+img {vertical-align: bottom; border: none;}
+
+
+body {font-family: '맑은고딕','Apple SD Gothic Nep',sans-serif;}
+
+
+/* 로고설정 */
+
+.logo {}
+.logo a {}
+.logo a img {width: 250px; height: 33px;}
+.logo a:hover {}
+
+/* html 태그 안에 인라인방식 css를 직접 기재해서 우선순위로 크기를 
+조절하게 만들어둠 */
+
+/* 메뉴설정 */
+.menu {}
+.menu ul {} 
+.menu li {}
+.menu li a {display: block; padding: 10px 15px; font-size: 14px;}
+.menu li a:hover {background-color: #eee;} 
+
+/* 헤더 그림 */
+.topimg {max-width: 100%;
+height: auto;}
+
+/* 공지사항설정 */
+.notice {}
+.notice ul {} 
+.notice li {}
+.notice li a {display: block; padding: 5px; border-bottom: dotted 2px #ddd;}
+.notice li a:hover {}
+
+
+/* 박스 6-1,박스 6-2,박스 6-3 가로정렬*/
+.box6 {display: flex;}
+.box6>div {width: 32%;}
+.box6-1,.box6-2 {margin-right: 2%;} 
+
+
+.notice a:after {content: "";
+display: block;
+clear: both;}
+.notice span {float: left; width: 60px; display: inline-block;}
+.notice .txt {float: none; width: auto; margin-left: 60px;}
+
+/* snsSet설정 */
+.snsSet {}
+.snsSet ul {}
+.snsSet li {}
+.snsSet li a {display: block; padding: 10px; margin-bottom: 10px; font-size: 14px;
+background-color: #eee;
+border-radius: 4px;}
+
+/* 카피라이트설정 */
+.copyright { color:  #666; font-size: 14px;}
+
+/* 박스5박스 바형태로 디자인하기 */
+.box5 {background-color: #ddd;
+padding: 15px 0;}
+
+
+/* 박스위아래설정 */
+
+.boxA {padding-top: 20px;
+padding-bottom: 10px;}
+
+.box4 {padding-top: 20px;
+padding-bottom: 20px;}
+
+.box6 {padding-top: 20px;}
+
+/* 박스왼쪽오른쪽설정 */
+.boxA,.box4,.box5 {padding-left: 15px;
+padding-left: 15px;}
+
+
+/* 599px 이하구간설정 */
+@media (max-width:599px) 
+{
+
+}
+
+
+
+
+
+/* 미디어쿼리구간 설정 */
+/* 768px이상 구간 설정 */
+@media (min-width:768px) 
+{
+    /* 박스1과 박스2의 가로정렬 */
+    .boxA {display: flex;
+    justify-content: space-between;
+align-items: center;}
+    .boxA>div {}
+
+    /* 메뉴설정 */
+.menu {}
+.menu ul {display: flex;} 
+.menu li {}
+.menu li a {}
+.menu li a:hover {} 
+
+
+/* 공지사항,snsSet 가로정렬 */
+.box4 {display: flex;}
+.box4>div:nth-child(1) {width: 70%;
+                        padding-right: 35px;}
+.box4>div:nth-child(2) {width: 30%;}
+
+
+
+}
+
+
+
+
+
+/* 1190px 이상일떄 */
+@media (min-width:1190px)
+{
+    /* 레이아웃의 전체너비를 고정하고
+    가운데에 배치 */
+    .boxA,.box4,.box3,.copyright,.box6{width:1140px; margin: auto;}
+}
