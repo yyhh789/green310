@@ -6,7 +6,7 @@ a {text-decoration: none; color: black;}
 img {vertical-align: bottom; border: none;}
 
 
-body {font-family: '맑은고딕','Apple SD Gothic Nep',sans-serif;}
+body {font-family: '맑은고딕','Apple SD Gothic Neo',sans-serif;}
 
 
 /* 로고설정 */
@@ -38,10 +38,6 @@ height: auto;}
 .notice li a:hover {}
 
 
-/* 박스 6-1,박스 6-2,박스 6-3 가로정렬*/
-.box6 {display: flex;}
-.box6>div {width: 32%;}
-.box6-1,.box6-2 {margin-right: 2%;} 
 
 
 .notice a:after {content: "";
@@ -52,14 +48,74 @@ clear: both;}
 
 /* snsSet설정 */
 .snsSet {}
+.snsSet p {background-color: #ddd; font-size: 14px; text-align: center;
+padding: 10px;
+margin-bottom: 20px;
+}
+.snsSet p {
+	position: relative;
+	background: #ddd;
+}
+.snsSet p:after {
+	top: 100%;
+	left: 20%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 15px;
+	margin-left: -15px;
+}
+/* 말풍선 모양을 제작할떄 사용하는 제너레이터
+http://cssarrowplease.com */
 .snsSet ul {}
 .snsSet li {}
 .snsSet li a {display: block; padding: 10px; margin-bottom: 10px; font-size: 14px;
 background-color: #eee;
-border-radius: 4px;}
+border-radius: 4px;
+color: #fff;}
+.snsSet i {margin-right: 10px;}
+
+.snsSet li:nth-child(1) a {background-color: #1da1f2;}
+.snsSet li:nth-child(2) a {background-color: #1877f2;}
+.snsSet li:nth-child(3) a {background-color: #833ab4;}
+
 
 /* 카피라이트설정 */
 .copyright { color:  #666; font-size: 14px;}
+
+
+
+/* summary설정 */
+.summary {}
+.summary a {display: block;
+background-color: #222;
+color: #fff;
+text-align: center;}
+.summary a i {font-size: 38px;
+padding-top: 40px;
+padding-bottom: 40px;
+display: block;}
+.summary  h2 {font-size: 20px;
+font-weight: normal;
+padding-top: 5px;
+padding-bottom: 5px;}
+.summary  p {background-color: #524e3c;
+padding-top: 15px;
+padding-bottom: 15px;}
+.fa-database {background-color: #bfbd13;}
+.fa-bar-chart {background-color: #c58839;}
+.fa-clock-o {background-color: #859f46;}
+
+
+
+
+
+
 
 /* 박스5박스 바형태로 디자인하기 */
 .box5 {background-color: #ddd;
@@ -75,10 +131,20 @@ padding-bottom: 10px;}
 padding-bottom: 20px;}
 
 .box6 {padding-top: 20px;}
+.box6-1,.box6-2,.box6-3 {padding-bottom: 10px;}
 
 /* 박스왼쪽오른쪽설정 */
 .boxA,.box4,.box5 {padding-left: 15px;
 padding-left: 15px;}
+
+
+
+
+
+
+
+
+/* 미디어쿼리구간 설정 */
 
 
 /* 599px 이하구간설정 */
@@ -90,8 +156,27 @@ padding-left: 15px;}
 
 
 
+/* 767 이하구간설정 */
+@media (max-width:767px)
+{
+/* 메뉴토글설정 */
 
-/* 미디어쿼리구간 설정 */
+.menu {display: none;}
+.menuBtn {position: absolute;
+right: 15px;
+top: 15px;
+padding: 6px 16px;
+border: solid 1px #aaa;}
+.menuBtn i {color: #888;
+font-size: 18px;
+background-color: #fff;}
+
+
+}
+
+
+
+
 /* 768px이상 구간 설정 */
 @media (min-width:768px) 
 {
@@ -99,14 +184,16 @@ padding-left: 15px;}
     .boxA {display: flex;
     justify-content: space-between;
 align-items: center;}
-    .boxA>div {}
+
 
     /* 메뉴설정 */
-.menu {}
+.menu {display: block !important;}
 .menu ul {display: flex;} 
 .menu li {}
 .menu li a {}
 .menu li a:hover {} 
+
+.menuBtn {display: none;}
 
 
 /* 공지사항,snsSet 가로정렬 */
@@ -114,6 +201,11 @@ align-items: center;}
 .box4>div:nth-child(1) {width: 70%;
                         padding-right: 35px;}
 .box4>div:nth-child(2) {width: 30%;}
+
+/* 박스 6-1,박스 6-2,박스 6-3 가로정렬*/
+.box6 {display: flex;}
+.box6>div {width: 32%;}
+.box6-1,.box6-2 {margin-right: 2%;} 
 
 
 
@@ -128,5 +220,9 @@ align-items: center;}
 {
     /* 레이아웃의 전체너비를 고정하고
     가운데에 배치 */
-    .boxA,.box4,.box3,.copyright,.box6{width:1140px; margin: auto;}
+    .boxA,.box4,.box3,.copyright,.box6 {width:1140px; margin: auto;}
+	/* 박스 6-1,박스 6-2,박스 6-3 가로정렬*/
+.box6 {display: flex;}
+.box6>div {width: 32%;}
+.box6-1,.box6-2 {margin-right: 2%;} 
 }

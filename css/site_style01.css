@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+*{margin: 0;padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: black;}
+img {vertical-align: bottom;border: none;}
+body {font-family: '맑은고딕', 'Apple SD Gothic Neo',sans-serif;}
+
+    /* 레이아웃의 전체너비를 고정하고
+    가운데에 배치 */
+    .box1,.box2,.box3,.box4,.box5 {width:1140px; margin: auto;}
+
+/* 로고 */
+.box1 img {width: 250px; height: 30px; }
+.box1-img {padding-top: 10px;}
+
+/* 메뉴 */
+.box1-1 ul {display: flex; justify-content: flex-end;}
+.box1-1 li a {display: block; padding: 10px 15px; font-size: 14px;}
+.box1-1 a:hover  {background-color: #b9b6b6;}
+
+
+/* 헤더이미지 */
+.box2 img {max-width: 100%;height: auto;}
+
+.box3-1 {}
+.box3-2 {}
+.box3-3 {}
+
+
+
+
