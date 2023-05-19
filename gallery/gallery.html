@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>gallery</title>
+		
+	
+
+<style>
+	*{margin: 0;padding: 0;}
+	ul,ol{list-style: none;}
+	img{border: none;vertical-align: bottom;}
+#gallery {background-color: blueviolet;
+width: 760px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;}
+
+/* 큰이미지 설정 */
+#image {background-color: aqua;
+width: 760px;
+height: 470px;
+background-color: red;
+position: relative;}
+
+#image p {position: absolute;
+	display: none;	
+left: 0;
+top:0;}
+
+#image p:nth-child(1) {display: block;}
+
+
+/* 작은이미지 트레일러 설정 */
+
+#thumbnail {background-color: aquamarine;
+width: 760px;
+margin-top:10px;
+position: relative;}
+/* 플렉스이동방식 */
+#thumbnail .left{position: absolute;
+					left: -20px;
+					top:50%;
+				margin-top: -12.5px;}
+#thumbnail .container{width: 760px;
+height: 75px;
+overflow: hidden;}
+#thumbnail .container ul{display: flex;}
+#thumbnail .container li{margin-right: 8px;}
+#thumbnail .right {position: absolute;
+				right: -20px;
+				bottom: 50%;
+				margin-bottom: -12.5px;
+				}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function()
+	{
+// container의 li를 클릭했을떄, image의 p가 순번에 맞게 보여라.
+
+$('.container li').click(function() 
+{
+
+
+
+
+	// 클릭한 나의순번찾기
+let i = $(this).index()
+
+$('#image p').hide()
+
+$('#image p').eq(i).show()
+
+
+
+
+
+})
+
+
+	}
+	)
+
+
+
+</script>
+
+	</head>
+	<body>
+		<div id="gallery">
+			<div id="image">
+				<p style="opacity:1;"><img src="slideImg/0.jpg" alt="" /></p>
+				<p><img src="slideImg/1.jpg" alt="" /></p>
+				<p><img src="slideImg/2.jpg" alt="" /></p>
+				<p><img src="slideImg/3.jpg" alt="" /></p>
+				<p><img src="slideImg/4.jpg" alt="" /></p>
+				<p><img src="slideImg/5.jpg" alt="" /></p>
+				<p><img src="slideImg/6.jpg" alt="" /></p>
+				<p><img src="slideImg/7.jpg" alt="" /></p>
+				<p><img src="slideImg/8.jpg" alt="" /></p>
+				<p><img src="slideImg/9.jpg" alt="" /></p>
+				<p><img src="slideImg/10.jpg" alt="" /></p>
+				<p><img src="slideImg/11.jpg" alt="" /></p>
+				<p><img src="slideImg/12.jpg" alt="" /></p>
+				<p><img src="slideImg/13.jpg" alt="" /></p>
+				<p><img src="slideImg/14.jpg" alt="" /></p>
+				<p><img src="slideImg/15.jpg" alt="" /></p>
+				<p><img src="slideImg/16.jpg" alt="" /></p>
+				<p><img src="slideImg/17.jpg" alt="" /></p>
+			</div>
+			<div id="thumbnail">
+				<div class="left">
+					<span><img src="slideImg/btn_left.gif" alt="이전" /></span>
+				</div>
+				
+				<div class="container">
+					<ul>
+						<li class="thumb"><img src="slideImg/thumb0.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb1.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb2.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb3.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb4.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb5.jpg" alt="" /></li>
+						<li class="thumb ml0"><img src="slideImg/thumb7.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb7.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb8.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb9.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb10.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb11.jpg" alt="" /></li>
+						<li class="thumb ml0"><img src="slideImg/thumb12.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb13.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb14.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb15.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb16.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb17.jpg" alt="" /></li>
+					</ul>
+				</div>
+				
+				<div class="right">
+					<span><img src="slideImg/btn_right.gif" alt="다음" /></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
