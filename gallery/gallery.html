@@ -9,16 +9,22 @@
 	
 
 <style>
-	*{margin: 0;padding: 0;}
-	ul,ol{list-style: none;}
-	img{border: none;vertical-align: bottom;}
-#gallery {background-color: blueviolet;
+	* {margin: 0;
+		padding: 0;}
+
+	ul {list-style: none;}
+	img {border: none;
+		vertical-align: bottom;}
+
+	#gallery {background-color: blueviolet;
 width: 760px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 50px;}
+margin-top: 50px;
+}
 
-/* 큰이미지 설정 */
+
+/* 큰이미지설정 */
 #image {background-color: aqua;
 width: 760px;
 height: 470px;
@@ -26,64 +32,123 @@ background-color: red;
 position: relative;}
 
 #image p {position: absolute;
-	display: none;	
 left: 0;
-top:0;}
+top: 0;
+opacity: 0;
+transition: all 0.8s;}
 
-#image p:nth-child(1) {display: block;}
+#image p:nth-child(1) {opacity: 1;}
 
 
-/* 작은이미지 트레일러 설정 */
 
+/* 작은이미지트레일러설정
 #thumbnail {background-color: aquamarine;
+margin-top: 10px;
+	display: flex;
 width: 760px;
-margin-top:10px;
+flex-wrap: wrap;	
+align-items: center;	}
+/* 플렉스이동방식 
+			#thumbnail .left{width: 13px;
+							margin-right: 2px;}
+			#thumbnail .container{width: 730px;
+			height: 75px;
+			overflow: hidden;}
+			#thumbnail .container ul {display: flex;}
+			#thumbnail .container li {margin-right: 2px;}
+			#thumbnail .right {width: 13px;
+							margin-left: 2px;}
+*/
+
+
+
+/* 작은이미지트레일러설정 */
+#thumbnail {background-color: aquamarine;
+margin-top: 10px;
+width: 760px;
+overflow: hidden;
 position: relative;}
 /* 플렉스이동방식 */
-#thumbnail .left{position: absolute;
-					left: -20px;
-					top:50%;
-				margin-top: -12.5px;}
-#thumbnail .container{width: 760px;
-height: 75px;
-overflow: hidden;}
-#thumbnail .container ul{display: flex;}
-#thumbnail .container li{margin-right: 8px;}
-#thumbnail .right {position: absolute;
+			#thumbnail .left{position: absolute;
+							left:-20px ;
+							top: 50%;
+							margin-top: -12.5px;
+							}
+			#thumbnail .container{width: 760px;
+			height: 75px;
+			
+			position: relative;
+			}
+			#thumbnail .container ul {display: flex;
+				position: absolute;
+				top: 0;
+			opacity: 1;}
+			#thumbnail .container ul:nth-child(1) {left: 0;
+			margin-left: -8px;
+		animation: ani1 30s linear infinite;
+		
+			}
+			#thumbnail .container ul:nth-child(2) {left: 100%;
+				animation: ani2 30s linear infinite;}
+			#thumbnail .container li {margin-left: 8px;}
+			#thumbnail .right {position: absolute;
 				right: -20px;
-				bottom: 50%;
-				margin-bottom: -12.5px;
-				}
+			bottom: 50%;
+		margin-bottom: -12.5px;}
+
+		#thumbnail:hover ul:nth-child(1) {animation-play-state: paused;}
+		#thumbnail:hover ul:nth-child(2) {animation-play-state: paused;}
+
+
+		/* 애니메이션만들기 */
+
+		/* 
+		1.움직이는 모습을 시작점에서부터 끝점까지의 형태를 
+		지정해준다. 
+		2.지정해준 모습을 각자의 스타일에 맞춰 이름을 지정해준다.
+		3.이름을 부르고 실행속도를 지정하고 횟수를 지정해서 동작시킨다. */
+
+		@keyframes ani1 {
+			0% {left: 0;}
+			50%{left: -100%;}
+			50.00001%{left: 100%;}
+			100%{left: 0;}
+		}
+		@keyframes ani2 {
+			0% {left: 100%;}
+			50% {left: 0;}
+			100% {left: -100%;}
+		}
+
 </style>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 <script>
-	$(document).ready(function()
-	{
-// container의 li를 클릭했을떄, image의 p가 순번에 맞게 보여라.
-
-$('.container li').click(function() 
-{
+	$(document).ready(function(){
 
 
+
+// container의 li 를 클릭했을때,image의 p가 순번에 맞게 보여라.
+
+$('.left').click(function(){
 
 
 	// 클릭한 나의순번찾기
 let i = $(this).index()
-
-$('#image p').hide()
-
-$('#image p').eq(i).show()
+alert(i)
 
 
 
+
+$('#image p').css({'opacity':0})
+$('#image p').eq(i).css({'opacity':1})
 
 
 })
 
 
-	}
-	)
 
+	})
 
 
 </script>
@@ -124,18 +189,14 @@ $('#image p').eq(i).show()
 						<li class="thumb"><img src="slideImg/thumb3.jpg" alt="" /></li>
 						<li class="thumb"><img src="slideImg/thumb4.jpg" alt="" /></li>
 						<li class="thumb"><img src="slideImg/thumb5.jpg" alt="" /></li>
-						<li class="thumb ml0"><img src="slideImg/thumb7.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb7.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb8.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb9.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb10.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb11.jpg" alt="" /></li>
-						<li class="thumb ml0"><img src="slideImg/thumb12.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb13.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb14.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb15.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb16.jpg" alt="" /></li>
-						<li class="thumb"><img src="slideImg/thumb17.jpg" alt="" /></li>
+					</ul>
+					<ul>
+						<li class="thumb"><img src="slideImg/thumb0.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb1.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb2.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb3.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb4.jpg" alt="" /></li>
+						<li class="thumb"><img src="slideImg/thumb5.jpg" alt="" /></li>
 					</ul>
 				</div>
 				
@@ -144,5 +205,70 @@ $('#image p').eq(i).show()
 				</div>
 			</div>
 		</div>
+
+
+
+		<!-- css를 통한 애니메이트 -->
+
+<style>
+	.boxB {width: 100%;}
+	.boxA {display: flex;
+		width: 612px;
+		left: 50%;
+		margin-left:-306px ;
+		background-color: blanchedalmond;
+		justify-content: center;
+	height: 102px;
+position: relative;
+overflow: hidden;}
+	.boxA ul{display: flex;
+				position: absolute;
+				top: 0;
+			opacity: 1;}
+	.boxA li{border: solid 	1px;
+	width: 100px;
+	height: 100px;}
+	.boxA li:nth-child(4) p{color: red;}
+	.boxA ul:nth-child(1){left: 0;
+			margin-left: -8px;
+		animation: ani3 30s linear infinite;}
+				.boxA:hover ul:nth-child(1) {animation-play-state: paused;}
+
+
+@keyframes ani3{
+0%{left: 0;}
+50%{left: -100%;}
+50.000001%{left: 100%;}
+100%{left: 0;}
+}
+
+
+</style>
+
+
+
+
+
+		<div class="boxB">
+			<div class="boxA">
+				<ul>
+					<li><p>1</p></li>
+					<li><p>2</p></li>
+					<li><p>3</p></li>
+					<li><p>4</p></li>
+					<li><p>5</p></li>
+					<li><p>6</p></li>					
+					<li><p>7</p></li>
+					<li><p>8</p></li>
+					<li><p>9</p></li>
+					<li><p>10</p></li>
+					<li><p>11</p></li>
+					<li><p>12</p></li>
+				</ul>
+			</div>
+		</div>
+
+
+
 	</body>
 </html>
