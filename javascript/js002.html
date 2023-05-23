@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_객체</title>
+</head>
+<body>
+    <h1>자바스크립트_객체</h1>
+    <p id="txt">요소를 불러내는 추상적인 형태 - 객체 <br>
+    요소 - element</p>
+    <ul class="box">
+        <li>id선택 - getElementById('아이디이름')</li>
+        <li>태그명 - getElementsByTagName('태그이름')</li>
+        <li>클래스명 - getElementsByClassName('클래스이름')</li>
+    </ul>
+
+    <script>        
+    const txt = document.getElementById('txt')
+        txt.style.color ='blue'
+        txt.textContent = '연습용입니다.'
+        txt.style.display = 'none' 
+    </script>
+</body>
+</html>
