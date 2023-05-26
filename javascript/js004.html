@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_조건문</title>
+</head>
+<body>
+    <h1>자바스크립트_조건문 : 성적표만들기</h1>
+    <p>문제 : 과학, 수학, 영어, 국어 총 4개의 점수를 묻고 
+        총점을 내고, 평균을 내서 평균값이 90점이상 A학점, 80점 이상은 B학점,
+        70점이상은 C학점, 60점이상은 D학점, 그 이하는 F학점으로 출력한다.
+    </p>
+
+    <div class="box1">
+        당신의 총점은 <span id="add">00</span> 입니다. 
+
+    </div>
+    <div class="box2">당신의 평균점수는 <span id="ave">00</span>입니다.</div>
+<div class="box3">당신의 학점은 <span id="stu">00</span>학점입니다.</div>
+
+    <style>
+
+        .box1 {background-color: skyblue;
+            padding: 30px;
+            text-align: center;
+        font-size: 28px;}
+        .box1 span {color: salmon;
+                    font-weight: bold;}
+
+        .box2 {background-color: darkcyan;
+            padding: 30px;
+            text-align: center;
+        font-size: 28px;}
+        .box2 span {color: lightgoldenrodyellow;
+                    font-weight: bold;}            
+    </style>
+
+    <script>
+
+        let sic = Number(prompt('당신의 과학점수를 입력하세요'))
+        let mat = Number(prompt('당신의 수학점수를 입력하세요'))
+        let eng = Number(prompt('당신의 영어점수를 입력하세요'))
+        let kor = Number(prompt('당신의 국어점수를 입력하세요'))
+
+        let add = sic+mat+eng+kor;
+        let ave = add/4
+
+
+        let addRe = document.getElementById('add');
+        let aveRe = document.getElementById('ave');
+        let stu = document.getElementById('stu');
+
+
+
+        addRe.textContent=add;
+        aveRe.textContent=ave;
+
+        // 조건문 생성 
+
+        if(ave>=90){
+            stu.textContent='A'
+
+        }else if(ave<90 && ave>=80){
+
+            stu.textContent='B'
+        }
+        else if(ave<80 && ave>=70){
+
+stu.textContent='C'
+}else if(ave<70 && ave>=60){
+
+stu.textContent='D'
+}else{
+    stu.textContent='F'
+
+}
+
+
+
+
+    </script>
+</body>
+</html>

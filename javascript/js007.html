@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_이벤트</title>
+</head>
+
+<body>
+    <h1 id="ti1">자바스크립트_이벤트</h1>
+    <p>이벤트는 기보드를 누르거나 마우스를 클릭하는 것처럼 어떤현상이 프로그램에
+        영향을 미치는 것을 말합니다.
+    </p>
+    <ul>
+        <li id="li1">마우스이벤트</li>
+        <li id="li2">키보드이벤트</li>
+        <li id="li3">HTML 프레임이벤트</li>
+        <li id="li4">HTML 입력양식이벤트</li>
+        <li id="li5">사용자인터페이스이벤트</li>
+        <li id="li6">구조변화이벤트</li>
+        <li id="li7">터치이벤트</li>
+    </ul>
+
+    <p>작성법 <br>
+        일반적인방식 : window.onload = function(){실행문}</p>
+    <p>설명 window는 선택자의 자리 , onload는 이벤트 속성이라는 이름으로 on을 제외한 load가
+        이벤트이름 또는 이벤트타입 이라 불르고, 이벤트속성에 넣는 함수를 이벤트리스너 이벤트핸들러 라고 한다.
+    </p>
+    <button id="btn">클릭</button>
+
+    <script>
+        window.onload = function () {
+            const btn = document.getElementById('btn');
+            const ti1 = document.getElementById('ti1');
+            const li1 = document.getElementById('li1');
+            const li2 = document.getElementById('li2');
+            const li3 = document.getElementById('li3');
+            const li4 = document.getElementById('li4');
+            const li5 = document.getElementById('li5');
+            const li6 = document.getElementById('li6');
+            const li7 = document.getElementById('li7');
+
+
+
+
+            btn.onclick = function () {
+                alert('클릭하셨습니다.')
+            };
+        }
+            li1.onmouseenter = function(){
+                li1.style.backgroundColor='red'
+            }      
+            li1.onmouseout = function(){
+                li1.style.backgroundColor='red'
+            }
+
+
+
+            li1.onmouseenter = function(){
+                li1.style.backgroundColor='#ff0000'
+            }      
+            li1.onmouseout = function(){
+                li1.style.backgroundColor='#ff0000'
+            }
+
+            li2.onmouseenter = function(){
+                li2.style.backgroundColor='#ff8c00'
+            }      
+            li2.onmouseout = function(){
+                li2.style.backgroundColor='#8b0000'
+                li1.style.backgroundColor='#8b0000'
+            }
+
+            li3.onmouseenter = function(){
+                li3.style.backgroundColor='	#ffff00'
+                
+            }      
+            li3.onmouseout = function(){
+                li3.style.backgroundColor='#FA8072'
+                li2.style.backgroundColor='#FA8072'
+                li1.style.backgroundColor='#FA8072'
+            }
+
+            li4.onmouseenter = function(){
+                li4.style.backgroundColor='#008000'
+            }      
+            li4.onmouseout = function(){
+                li4.style.backgroundColor='#FF6347'
+                li3.style.backgroundColor='#FF6347'
+                li2.style.backgroundColor='#FF6347'
+                li1.style.backgroundColor='#FF6347'
+            }
+
+            li5.onmouseenter = function(){
+                li5.style.backgroundColor='#0000ff'
+            }      
+            li5.onmouseout = function(){
+                li5.style.backgroundColor='#FF4500'
+                li3.style.backgroundColor='#FF4500'
+                li2.style.backgroundColor='#FF4500'
+                li1.style.backgroundColor='#FF4500'
+                li4.style.backgroundColor='#FF4500'
+            }
+
+            li6.onmouseenter = function(){
+                li6.style.backgroundColor='#4b0082'
+            }      
+            li6.onmouseout = function(){
+                li6.style.backgroundColor='#FF8C00'
+                li5.style.backgroundColor='#FF8C00'
+                li3.style.backgroundColor='#FF8C00'
+                li2.style.backgroundColor='#FF8C00'
+                li1.style.backgroundColor='#FF8C00'
+                li4.style.backgroundColor='#FF8C00'
+            }
+
+            li7.onmouseenter = function(){
+                li7.style.backgroundColor='#800080'
+            }      
+            li7.onmouseout = function(){
+                li7.style.backgroundColor='#FFDAB9'
+                li6.style.backgroundColor='#FFDAB9'
+                li5.style.backgroundColor='#FFDAB9'
+                li3.style.backgroundColor='#FFDAB9'
+                li2.style.backgroundColor='#FFDAB9'
+                li1.style.backgroundColor='#FFDAB9'
+                li4.style.backgroundColor='#FFDAB9'
+            }
+            
+            li3.onmouseout = function(){
+                li7.style.backgroundColor='transperant'
+                li6.style.backgroundColor='transperant'
+                li5.style.backgroundColor='transperant'
+                li3.style.backgroundColor='transperant'
+                li2.style.backgroundColor='transperant'
+                li1.style.backgroundColor='transperant'
+                li4.style.backgroundColor='transperant'
+            }
+            
+    </script>
+
+<h2>추가선택자</h2>
+<p>id값을 매번 HTML 요소에 추가하는데 불편함이 있음
+    getElementById 값 대신에
+    querySelector 또는 querySelectorAll 이라는 객체로
+    불러낼수 있다. <br>
+    이떄, querySelector 는 html 태그중 중복요소가 있을떄
+    맨 처음에 있는 요소만 부르고, querySelectorAll은 모든 요소를 부른다.
+</p>
+
+
+</body>
+
+</html>

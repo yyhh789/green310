@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스트립트_연산자</title>
+</head>
+<body>
+    <h1>자바스크립트_연산자</h1>
+    <p>설명문은 document에서 확인할수 있고 
+        자바스크립트 예제는 console 에서 확인할수 있다.
+    </p>
+
+    <div class="box1">
+
+        <h2>산술연산자</h2>
+        <ul>
+            <li>더하기 : +</li>
+            <li>빼기 : -</li>
+            <li>곱하기: *</li>
+            <li>나누기: /</li>
+            <li>나머지: %</li>
+        </ul>
+
+        <p>작성법<br>
+        변수로 숫자를 지정한다.<br>
+        let 또는  var 또는 const 로 변수를말한다.<br>
+        <em>
+            let- 가장유연하게 사용할수있고 모든변수이름앞에 사용할수있다.<br>
+            에러가 가장 나지 않음<br>
+            var - 처음으로 생긴 변수 지정법으로 가장 오랜역사를
+            가지고 있으며 많은 오픈파일에서 보일수 있다.<br>
+            단점은 중복되더라도 발견하지 못한다.<br>
+            const - 고유명사같은 개념으로 변수를 바꿀수 없다.<br>
+            대부분 선택자의 이름으로 한번 할당되면 바뀌지 않는 값에 쓰인다.
+        </em><br>
+        let a = 10<br>
+        풀이 - a는 10이다.<br>
+        let b = 5 <br>
+        풀이 - b는 5이다 <br>
+        let c ;<br>
+        풀이 - C를 변수 이름으로 사용하겠다 <br>
+        c=a+b<br>
+        풀이 - c는 10+5 이다 
+
+
+        <script>
+
+            // 변수선언
+            const a= 10;
+            let b= 5;
+            var c ;
+
+            c=a+b;
+
+            c=a-b;
+            c=a*b;
+            c= a/b;
+            c= a%b;
+
+
+            console.log(c);
+
+
+        </script>
+
+        
+        
+        
+        </p>
+    </div>
+
+
+    <div class="box2">
+        <h2>비교연산자</h2>
+        <p>변수가 두가지가 필요하며 2개의 데이터를
+            부등호를 통해 비교하며 바르면 true 틀리면
+            false가 풀력된다. 
+
+        </p>
+        <ul>
+            <li>A가B보다 크다 - A>B</li>
+            <li>A가B보다 크거나같다 - A>=B</li>
+            <li>A가B와 같다 - A==B</li>
+            <li>A가 B와 다르다. - A!=B</li>
+            <li>A가 50보다 크거나 20보다 작다<br>
+            A > 50 && A < 20 </li>
+
+        </ul>
+        <h2>논리연산자</h2>
+        <ul>
+            <li>그리고(and) - && </li>
+            <li>또한(or) - \\</li>
+            <li>아님(not) - !</li>
+        </ul>
+
+
+        <script>
+            // 변수선언 
+            let d = 50;
+            let e = 20;
+
+            var f ;
+
+            f = d>e;
+            f= d>=e;
+            f= d==e;
+            
+
+             f = d>20 && e==20
+            console.log(f)
+        </script>
+
+
+    </div>
+
+
+    <div class="box3">
+    <h3>예제풀이</h3>
+    나이를 물은후 20세 이상이면 true 
+    이하이면 false 나타나게해라. <br>
+
+    만약에 age가 20보다 크면 
+    '당신은 성인입니다.'<br>
+    라는 말을 document에 출력하고 <br>
+    그렇지 않으면 
+    '당신은 성인이 아닙니다'라고 출력해라
+
+
+
+
+
+
+
+    </div>
+    <script>
+
+        //  질문창만들기
+        // prompt('질문')
+       let age=  prompt('당신의나이는?')
+       console.log(age)
+        let result = age>=20
+
+        console.log(result);
+
+
+        if(age>=20){
+
+            document.write('당신은 성인입니다')
+        }else{
+
+            document.write('당신은 성인이 아닙  다')
+        }
+
+    </script>
+
+
+<div class="box4">
+    <h2>증감연산자</h2>
+    <p>변수에 저장된 값에 1씩 증가하거나 감소한다.</p>
+
+    <ul>
+        <li>증가 : ++</li>
+        <li>감소 : --</li>
+    </ul>
+
+    <script>
+        let num1 = 10;
+
+        num1++;
+        console.log(num1)
+        num1++;
+        console.log(num1)
+        num1--;
+        console.log(num1)
+
+    </script>
+
+
+</div>
+
+<div class="box5">
+    <h2>대입연산자</h2>
+    <p>연산된 데이터를 지정된 변수에 대입한다.</p>
+    <ul>
+        <li> =  은 뒤에 있는 숫자나 내용을 앞의 변수에 대입한다. </li>
+        <li>변수 =5 <br>
+        풀이  5는 변수다.<br>
+        변수 +=5 <br>
+    풀이 5를 더해서 변수에 대입해라. </li>
+    </ul>
+
+    <script>
+
+        let num2 = 10;
+num2 +=5;
+num2 -=10;
+num2 *=3;
+num2 /=5;
+num2 %=2
+
+        console.log(num2)
+    </script>
+</div>
+</body>
+</html>

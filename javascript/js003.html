@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_조건문</title>
+</head>
+<body>
+    <h1>자바스크립트_조건문</h1>
+
+    <p>if문- 
+        조건문은 조건식을 만족(true) 했을때에만 실행문을 수행하는
+        제어문이다.
+    </p>
+
+    <p>작성법<br>
+    if(조건식){  실행문 }</p>
+
+    <p>if~else문 - 조건식을 만족했을때 if문 안에 있는 실행문1 을 
+        수행하고 만족하지 못했을시  else 문 안에 있는 실행문2 를 
+        수행한다. 
+        2가지 결과를 나타낼때 사용
+    </p>
+    <p>
+        작성법<br>
+        if(조건식){실행문1} else{ 실행문2}
+    </p>
+
+    <p> if~else if문
+        - 조건식을 만족했을때 if문 안에 있는 실행문1을 수행하고 
+        else if문 안에 있는 조건을 새롭게 만들어서 그 조건에 만족
+        했을때 실행문 2,실행문3 등등 여러개의 실행문을 만들어낼수 있다.
+    </p>
+
+    <p>작성법 <br>
+    if(조건식1){실행문1} else if(조건식2){실행문2}
+else if(조건식3){실행문3}.........else{실행문......}</p>
+
+<h4>예제만들기</h4>
+
+<ul>
+    <li>
+        문항1. 나이가 20세 이상이면 당신은 성인입니다. 라고 출력한다.
+    </li>
+    <li>
+        문항2.나이가 20세 이상이면 당신은 어른입니다. 라고 출력하고,
+        그 밖에는 당신은 어린아이입니다. 라고 출력한다.
+    </li>
+    <li>문항3.나이에 맞추어 당신은 10대입니다,당신은20대입니다,당신은30대입니다.....
+        당신은 60대 이상입니다 로 마무리해서 출력한다.
+    </li>
+</ul>
+
+<div>문항1.<span id="an01">정답내용</span></div>
+<div>문항2. <span id="an02"> 정답내용</span></div>
+
+<div>문항3. <span id="an03">정답내용</span></div>
+
+<script>
+
+    //문항1 내용작성
+
+    let age = prompt('당신의 나이는?(숫자로만기입해주세요)')
+
+    console.log(age)
+    if(age>=20){
+        let an01 = document.getElementById('an01');
+        let an02 = document.getElementById('an02')
+
+        an01.textContent='당신은성인입니다.'
+        an02.textContent='당신은어른입니다.'
+
+    }else {
+        let an02 = document.getElementById('an02')
+        an02.textContent='당신은어린아이입니다.'
+    }
+
+
+    // 세분화시킨 출력사항
+
+    let an03 = document.getElementById('an03')
+
+    if(age<=19){
+
+        an03.textContent='당신은 10대입니다.'
+
+        
+    }else if(age>19 && age<=29){
+        an03.textContent='당신은 20대입니다.'
+    }
+    else if(age>29 && age<=39){
+        an03.textContent='당신은 30대입니다.'
+    }
+    else if(age>39 && age<=49){
+        an03.textContent='당신은 40대입니다.'
+    }else if(age>49 && age<=59){
+        an03.textContent='당신은 50대입니다.'
+    }else {
+
+        an03.textContent='당신은 60대이상입니다.'
+    }
+
+
+
+
+
+    
+
+</script>
+
+    
+</body>
+</html>

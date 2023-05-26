@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_반복문</title>
+</head>
+<body>
+
+    <h1>자바스크립트_반복문</h1>
+    <p>조건식을 만족하는 동안 실행문을 반복적으로 수행한다.</p>
+
+    <ul>
+        <li>while문 - <br>
+        작성법 <br>
+        var a=시작값;<br>
+        while(조건식){
+
+            실행문;
+            증감식; - 시작값의변수이름뒤에 ++/-- 둘중하나.
+
+        }
+    </li>
+        <li>for문- while문과 반복문이라는 점은 같으나
+            비교적 간단한 기술방식으로 사용빈도수가높다.<br>
+        작성법<br>
+        for(var a =시작값; 조건식; 증감식){
+
+            실행문
+        }
+        
+        </li>
+    </ul>
+
+    <script>
+        var a=0
+        while(a<5){
+
+            console.log(a)
+            // 증감식; - 시작값의변수이름뒤에 ++/-- 둘중하나.
+            a++;
+
+        }
+
+        for(var b=0; b<5; b++){
+
+            console.log(b)
+        }
+
+    </script>
+
+
+
+<h2>예제만들기</h2>
+
+<p>구구단2단만들기</p>
+<!-- 
+
+    2x1=2
+    2x2=4
+    2x3=6
+    2x4=8
+    2x5=10
+    2x6=12
+    2x7=14
+    2x8=16
+    2x9=18
+ -->
+
+ <script>
+
+
+   
+ 
+//  반복문만들기
+for(var tt=1; tt<10; tt++){
+
+    document.write('2X'+tt+'='+2*tt+'<br>')
+    // '2X'+tt+'='+2*tt -> '외부언어'+변수+'외부언어'+변수연산
+}
+
+document.write('<h3>2단</h3>')
+document.write('2X2=4')
+
+for(var ti =2; ti<10; ti++){
+
+    document.write('<h3>'+ti+'단</h3>')
+    // 내부에 for문을 추가해서 2단부터 9단까지 출력하기
+    for(var tu=1;tu<10;tu++){
+        document.write(ti+'X'+tu+'='+ti*tu+'<br>')
+    }
+}
+
+
+
+
+
+
+
+
+// while문을 통한 반복문
+
+// var num1=2;
+// while(num1<10){
+
+//     document.write('<h2>'+num1+'단</h2>')
+//      var num2 = 1;
+//      while(num2<10){
+
+//         document.write(num1+'X'+num2+'='+num1*num2+'<br>')
+//         num2++;
+//      }
+    
+    
+//     num1++;
+
+// }
+
+// for문을 통한 반복문
+
+for(var num1=2; num1<10; num1++){
+
+    document.write('<h1>'+num1+'단</h1>')
+        for(var num2=1; num2<10; num2++){
+
+
+            document.write(num1+'x'+num2+'='+num1*num2+'<br>')
+        }
+}
+
+
+
+ 
+ </script>
+
+
+<h1>h1으로 쓴 글자입니다.</h1>
+<h2>h2으로 쓴 글자입니다.</h2>
+<h3>h3으로 쓴 글자입니다.</h3>
+<h4>h4으로 쓴 글자입니다.</h4>
+<h5>h5으로 쓴 글자입니다.</h5>
+<h6>h6으로 쓴 글자입니다.</h6>
+
+<script>
+
+// <h5>h5으로 쓴 글자입니다.</h5> 1~6까지 반복
+
+for(var ts= 1; ts<7; ts++){
+
+    document.write('<h'+ts+'>h'+ts+'으로 쓴 글자입니다.</h'+ts+'>')
+}
+
+
+</script>
+
+</body>
+</html>
