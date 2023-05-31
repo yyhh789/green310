@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭시화면이동샘플</title>
+</head>
+<body>
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        header {display: flex;
+        justify-content: space-between;
+background-color: brown;
+padding: 20px;
+align-items: center;
+box-sizing: border-box;
+position: fixed;
+width: 100%;
+left: 0;
+top: 0;}
+        header h1 {}
+        header ul {display: flex;
+            list-style: none;
+        }
+        header ul li {cursor: pointer;
+            margin-right: 38px;
+        font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+height: 100px;
+}
+article {height: 300PX;
+width: 100%;
+top: 0;
+left: 0;}
+article:nth-child(1) {background-color: aliceblue;}
+article:nth-child(2) {background-color: antiquewhite;}
+article:nth-child(3) {background-color: aqua;}
+article:nth-child(4) {background-color: aquamarine;}
+footer {height:60px;
+position: fixed;
+background-color: gray;
+bottom: 0;
+width: 100%;}
+
+div{position: fixed;
+width: 500px;
+height: 200px;
+left: 50%;
+top: 50%;
+margin-left: -250px;
+margin-top: -100px;}
+div p {width: 100%;
+font-size: 40px;
+text-align: center;
+}
+em {
+background-color: red;
+position: fixed;
+top: 0;
+left: 0;
+height: 50px;
+width: 50px;
+margin-top: -25px;
+margin-left: -25px;
+z-index: 999;}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            let ht = $(window).height(),
+            hht = $('header').height(),
+            fht = $('footer').height();
+        $(window).scroll(function(){
+            let sc = $(this).scrollTop();
+            $('h1').text(sc);
+            $(window).mousemove(function(e){
+                let x = e.pageX,
+                    y = e.pageY;
+                    $('div').children('p').eq(0).find('span').text(x)
+                    $('div').children('p').eq(1).find('span').text(y)
+
+
+
+                    $('em').css({'left':x,'top':y})
+                    
+            })
+            
+
+
+})
+            
+            console.log(ht)
+            console.log(hht+40)
+            console.log(fht)
+            
+            $('section').css({'margin-top':hht+40})
+            $('article').height(ht-(hht+40)-fht)
+            
+            let aht = $('article').height();
+            console.log(aht)
+            $("body").height(aht*4+fht)
+            $('header li').click(function(){
+                let i = $(this).index()
+                console.log(i)
+            $('html,body').stop().animate({scrollTop:aht*i},1000)
+            })
+        })
+    </script>
+    <em></em>
+    <div>
+        <p>X좌표:<span>00</span>
+        </p>
+        <p>Y좌표:<span>00</span></p>
+    </div>
+    <header>
+        <h1>로고 </h1>
+<ul>
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+    <li>menu</li>
+</ul>
+   </header>
+   <section>
+    <article>menu1</article>
+    <article>menu2</article>
+    <article>menu3</article>
+    <article>menu4</article>
+   </section>
+   <footer></footer>
+</body>
+</html>
