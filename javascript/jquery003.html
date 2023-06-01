@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_자동실행</title>
+</head>
+<body>
+    <h1>자바스크립트_자동실행</h1>
+    <h2>setInterval() : 메서드</h2>
+    <p>클릭이나 마우스 오버등 사용자가 이벤트를 하지 않고
+        일정시간마다 자동으로 특정구문이 실행하게 만드는 구문</p>
+        <p>작성벅: <br>
+        setInterval(function(){<br>
+실행구간 <br>
+        },반복시간지정) <br>
+    변수로 변경하여 정지시킬수도 있다. <br>
+    let 변수이름 = setInterval(function(){<br>
+        실행구간 <br>
+                },반복시간지정) <br>
+            clearInterval(변수이름) -> setInterval 구문을 정지시킬수 있다.</p>
+            <button class="btn1">start</button>
+            <button class="btn2">stop</button>
+            <div class="box">
+                <span>00</span>:<span>00</span>:<span>00</span>
+            </div>
+            <ul class="slide">
+                <li><img src="img/1.jpg" alt=""></li>
+                <li><img src="img/2.jpg" alt=""></li>
+                <li><img src="img/3.jpg" alt=""></li>
+            </ul>
+
+
+            <style>
+                *{margin: 0;
+                padding: 0;}
+                ul{list-style: none;}
+                .slide {position: relative;}
+                .slide li{position: absolute;
+                display: none;}
+                .slide li:nth-child(1){display: block;}
+            </style>
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <script>
+            $(document).ready(function(){
+                // 내장객체를 활용하여 시간정보 가져오기
+                let timer = setInterval(function(){
+                let now = new Date(),
+                hr = now.getHours(),
+                min = now.getMinutes(),
+                sec = now.getSeconds();
+                $('.box span').eq(0).text(hr)
+                $('.box span').eq(1).text(min)
+                $('.box span').eq(2).text(sec)
+                },1000)
+                // btn2를 누르면 시간이 멈추고(timer에 해당하는 setInterval을 지우고)btn1 누르면 시간이 간다.
+                // 변수를  지정하고 지정되어 있는 숫자로 로테이션시키기
+                $('.btn2').click(function(){
+                    clearInterval(timer)
+                });
+                $('btn1').click(function(){
+                timer = setInterval(function(){
+                now = new Date(),
+                hr = now.getHours(),
+                min = now.getMinutes(),
+                sec = now.getSeconds();
+                $('.box span').eq(0).text(hr)
+                $('.box span').eq(1).text(min)
+                $('.box span').eq(2).text(sec)
+                },1000)
+                })
+                
+                let ii=0;
+
+            setInterval(function(){
+
+
+                $('.box span').css({'color':'black'})
+                $('.box span').eq(ii).css({'color':'red'})
+                $('.slide li').css({'display':'none'})
+                $('.slide li').eq(ii).css({'display':'block'})
+
+                ii++;
+                if(ii==3) ii=0;
+                console.log(ii)
+            },2000);
+
+            
+            })
+            
+            </script>
+</body>
+</html>

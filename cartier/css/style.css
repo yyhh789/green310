@@ -1,0 +1,113 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* 전체설정 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  vertical-align: bottom;
+}
+
+/* 배경이미지설정 */
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+/* 로고설정 */
+
+#wrap h1 {
+  position: fixed;
+  text-align: center;
+  left: 50px;
+  top: 240px;
+  padding: 20px;
+}
+#wrap h1 strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: bold;
+  font-family: Verdana;
+  color: #333;
+}
+#wrap h1 img {
+  width: 200px;
+  height: auto;
+}
+#wrap h1 span {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-top: 10px;
+  color: #444;
+  font-family: Arial;
+}
+
+
+
+/* hero영역설정 */
+
+.txt {
+    position: fixed;
+    top: 380px;
+    left: 70px;
+    font-size: 30px;
+    color: #111;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.txt span {color: #888;}
+
+
+/* section설정 */
+
+
+section {position: fixed;
+        right: 0;
+    top: 0;
+width: 100%;
+height: 100%;}
+
+article {float: right;
+width: 12%;
+height: 100%;
+background-image: url(../img/divider.png);
+background-repeat: no-repeat;
+background-position: left center;
+transition: all 0.8s;
+position: relative;
+}
+
+article:hover {width: 35%;}
+
+article h2 {position: absolute;
+top: 300px;
+left: 20px;
+font-size: 20px;
+font-family: 'Raleway', sans-serif;
+font-weight: bold;;
+color: #666;
+border-left: 3px solid #555;
+padding-left: 15px;
+    }
