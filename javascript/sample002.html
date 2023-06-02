@@ -1,101 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드예제</title>
-</head>
-<style>
-    * { margin:0; padding:0 }
-    /* ul {overflow: hidden;} */
-   
-   
-    #wrap1 ul { width:280px; height:390px; 
-     position:relative;  margin:0 auto; 
-     list-style:none;
-     border: 5px solid #000;
-     }
-    #wrap1 ul li { width:200px; 
-     height:250px; position:absolute; left:100%;
-     opacity: 0.5 }
-    #wrap1 ul li:nth-child(1) {left:0;} 
-    #wrap2 {margin-top: 20px;
-     }
-    #wrap2 ul { width:280px; height:390px; 
-     position:relative;  margin:0 auto;
-     list-style:none;
-     border: 5px solid #000 }
-    #wrap2 ul li { width:200px; 
-     height:250px; position:absolute; top:0; left: 100%;
-     opacity: 0.5 }
-    #wrap2 ul li:nth-child(1) {left: 0} 
-    #wrap3 {margin-top: 20px;
-     
-    }
-    #wrap3 ul { width:280px; height:390px; 
-     position:relative;  margin:0 auto;
-     list-style:none;
-     border: 5px solid #000 }
-    #wrap3 ul li { width:200px; 
-     height:250px; position:absolute; top:-100%; left: 0%;
-     opacity: 0.5 }
-    #wrap3 ul li:nth-child(1) {top:0 
-    }
-   
-    #wrap4 {margin-top: 20px;
-   
-    }
-    #wrap4 ul { width:280px; height:390px; 
-     position:relative;  margin:0 auto;
-     list-style:none;
-     border: 5px solid #000 }
-    #wrap4 ul li { width:200px; 
-     height:250px; position:absolute; top:0; left: -100%;
-     opacity: 0.5 }
-    #wrap4 ul li:nth-child(1) {left: 0}
-   
-   
-    #wrap5 {margin-top: 20px;
-    }
-    #wrap5 ul { width:280px; height:390px; 
-     position:relative;  margin:0 auto;
-     list-style:none;
-     border: 5px solid #000 }
-    #wrap5 ul li { width:200px; 
-     height:250px; position:absolute; top:0; left: 0%;
-     opacity: 0 }
-    #wrap5 ul li:nth-child(1) {opacity: 1}
-   
-   
-   </style>
 
+    <style>
+        * { margin:0; padding:0 }
+        /* ul {overflow: hidden;} */
+       
+       
+        #wrap1 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto; 
+         list-style:none;
+         border: 5px solid #000;
+         overflow: hidden;
+         }
+        #wrap1 ul li { width:200px; 
+         height:250px; position:absolute; left:100%;
+         opacity: 0.5 }
+        #wrap1 ul li:nth-child(1) {left: 0} 
+        #wrap2 {margin-top: 20px;
+         }
+        #wrap2 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 ;
+         overflow: hidden;}
+        #wrap2 ul li { width:200px; 
+         height:250px; position:absolute; top:0; left: -100%;
+         opacity: 0.5 }
+        #wrap2 ul li:nth-child(1) {left: 0} 
+        #wrap3 {margin-top: 20px;
+         
+        }
+        #wrap3 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000;
+         overflow: hidden; }
+        #wrap3 ul li { width:200px; 
+         height:250px; position:absolute; top:-100%; left: 0%;
+         opacity: 0.5 }
+        #wrap3 ul li:nth-child(1) {top:0 
+        }
+       
+        #wrap4 {margin-top: 20px;
+       
+        }
+        #wrap4 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 ;
+         overflow: hidden;}
+        #wrap4 ul li { width:200px; 
+         height:250px; position:absolute; top:100%; left: 0;
+         opacity: 0.5 }
+        #wrap4 ul li:nth-child(1) {top:0}
+       
+       
+        #wrap5 {margin-top: 20px;
+        }
+        #wrap5 ul { width:280px; height:390px; 
+         position:relative;  margin:0 auto;
+         list-style:none;
+         border: 5px solid #000 }
+        #wrap5 ul li { width:200px; 
+         height:250px; position:absolute; top:0; left: 0%;
+         opacity: 0 }
+        #wrap5 ul li:nth-child(1) {opacity: 1}
+       
+       
+       </style>
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+    $(document).ready(function(){
+        let i=0;
+
+        setInterval(function(){
+            i++;
+            if(i==3)i=0;
+  
+
+    // #wrap1 li 중에 첫번째 아이의 위치를 왼쪽으로 이동해라.
+    $('#wrap1 li').eq(i-1).css({'left':0}).stop().animate({'left':'-100%'},800);
+        $('#wrap1 li').eq(i).css({'left':'100%'}).stop().animate({'left':'0'},800);
+
+        },2000)
+
+    
+
+
+    })
+</script>
+</head>
 <body>
     <div id="wrap1">
+        <ul>
+         <li class="image1"><img src="img/1.jpg" alt="1" /></li>
+         <li class="image2"><img src="img/2.jpg" alt="2" /></li>
+         <li class="image3"><img src="img/3.jpg" alt="3" /></li>
+        </ul>
+       </div>
+
+
+       <!-- 오른쪽이동슬라이드 -->
+
+       <div id="wrap2">
         <ul>
             <li class="image1"><img src="img/1.jpg" alt="1" /></li>
             <li class="image2"><img src="img/2.jpg" alt="2" /></li>
             <li class="image3"><img src="img/3.jpg" alt="3" /></li>
         </ul>
-    </div>
+       </div>
 
+
+<script>
+
+    // 1.수를 활용하여 로테이션 숫자만들기 (1,2,0)
+    // 2.이벤트의 움직임을 계산하여 텍스트로 작성하기
+
+    let a1 =0;
+    
+
+    setInterval(function(){
+
+        a1++;
+        if(a1==3)a1=0;
+
+        console.log(a1)
+
+        // #wrap2 li 가 오른쪽으로 (left가 증가 하게 변화)이동
+
+
+        // // 첫번째 아이가 left:0위치였다가 left:100%위치로 이동해라.
+        // $('#wrap2 li').eq(0).css({'left':0}).stop().animate({'left':'100%'},800)
+        //  // 두번째 아이가 left:-100%위치였다가 left:0위치로 이동해라.
+        //  $('#wrap2 li').eq(1).css({'left':'-100%'}).stop().animate({'left':'0'},800)
+
+         
+        // // 두번째 아이가 left:0위치였다가 left:100%위치로 이동해라.
+        // $('#wrap2 li').eq(1).css({'left':0}).stop().animate({'left':'100%'},800)
+        //  // 세번째 아이가 left:-100%위치였다가 left:0위치로 이동해라.
+        //  $('#wrap2 li').eq(2).css({'left':'-100%'}).stop().animate({'left':'0'},800)
+
+       
+         
+        //  // 세번째 아이가 left:0%위치였다가 left:100%위치로 이동해라.
+        //  $('#wrap2 li').eq(2).css({'left':'0'}).stop().animate({'left':'100%'},800)
+        //  // 첫번째 아이가 left:-100%위치였다가 left:0위치로 이동해라.
+        // $('#wrap2 li').eq(0).css({'left':'-100%'}).stop().animate({'left':'0'},800)
+
+  
+
+        $('#wrap2 li').eq(a1-1).css('left',0).stop().animate({'left':'100%'},800)
+        $('#wrap2 li').eq(a1).css({'left':'-100%'}).stop().animate({'left':0},800)
+
+  
+  
+        },2000)
+
+
+</script>
+
+
+  <!-- 아랫쪽이동슬라이드 -->
+
+  <div id="wrap3">
+    <ul>
+        <li class="image1"><img src="img/1.jpg" alt="1" /></li>
+        <li class="image2"><img src="img/2.jpg" alt="2" /></li>
+        <li class="image3"><img src="img/3.jpg" alt="3" /></li>
+    </ul>
+   </div>
+
+   <script>
+
+
+let b1 = 0;
+
+setInterval(function(){
+
+    b1++;
+    if(b1==3)b1=0;
+
+    $('#wrap3 li').eq(b1-1).css('top',0).stop().animate({'top':'100%'},800)
+    $('#wrap3 li').eq(b1).css('top','-100%').stop().animate({'top':'0'},800)
+
+},2000)
+   </script>
+
+
+
+<!-- 위쪽이동슬라이드 -->
+
+<div id="wrap4">
+    <ul>
+        <li class="image1"><img src="img/1.jpg" alt="1" /></li>
+        <li class="image2"><img src="img/2.jpg" alt="2" /></li>
+        <li class="image3"><img src="img/3.jpg" alt="3" /></li>
+    </ul>
+   </div>
+
+
+   <script>
+
+    let c1=0;
+
+    setInterval(function(){
+
+        c1++;
+        if(c1==3)c1=0;
+
+        $('#wrap4 li').eq(c1-1).css({'top':0}).stop().animate({'top':'-100%'},500)
+        $('#wrap4 li').eq(c1).css({'top':'100%'}).stop().animate({'top':0},500)
+
+
+    },2000)
+   </script>
+
+
+<!-- 은은하게 사라짐 -->
+<div id="wrap5">
+    <ul>
+        <li class="image1"><img src="img/1.jpg" alt="1" /></li>
+        <li class="image2"><img src="img/2.jpg" alt="2" /></li>
+        <li class="image3"><img src="img/3.jpg" alt="3" /></li>
+    </ul>
+   </div>
+
+   <script>
+
+    let d1=0;
+
+
+    setInterval(function(){
+
+        d1++;
+        if(d1==3)d1=0;
+
+
+        $('#wrap5 li').stop().animate({'opacity':0},800)
+        $('#wrap5 li').eq(d1).stop().animate({'opacity':1},800)
+    },2000)
+   </script>
+
+
+<div id="wrapper">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</div>
+
+<style>
+
+    #wrapper {}
+    #wrapper ul{width: 100%;
+                height: 500px;
+                position: relative;
+            list-style: none;
+        overflow: hidden;}
+    #wrapper li {width: 100%;
+                height: 100%;
+                font-size: 120px;
+                position: absolute;
+                left: 100%;
+            text-indent: -9999px;}
+
+                #wrapper li:nth-child(1){left: 0;
+                background-image: url(img/0.png);}
+                #wrapper li:nth-child(2){
+                    background-image: url(img/1.png);}
+                    #wrapper li:nth-child(3){
+                    background-image: url(img/2.png);}
+
+                    </style>
+
+<script>
+
+    let s1 = 0;
+
+    setInterval(function(){
+
+        s1++;
+        if(s1==3)s1=0;
+
+        $('#wrapper li').eq(s1-1).css('left',0).stop().animate({'left':'-100%'},1200)
+        $('#wrapper li').eq(s1).css('left','100%').stop().animate({'left':'0'},1200)
+    },3000)
+</script>
+
+
+
+    
 </body>
-   <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-        $(document).ready(function(){
-            let i=0;
-        
-            setInterval(function(){
-                i++;
-                if(i==3) i=0;
-                console.log(i)
-            $('#wrap1 li').eq(i-1).css({'left':'0'}).stop().animate({'left':'-100%'},800)
-            $('#wrap1 li').eq(i).css({'left':'100%'}).stop().animate({'left':'0'},800)
-            },2000)
-            // #wrap li 중에 첫번쨰 아이의 위치를 왼쪽으로 이동해라
-
-        })
-    </script>
-   
 </html>

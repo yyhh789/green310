@@ -97,9 +97,11 @@ background-repeat: no-repeat;
 background-position: left center;
 transition: all 0.8s;
 position: relative;
+overflow: hidden;
+
 }
 
-article:hover {width: 35%;}
+/* article:hover {width: 35%;} - 제이쿼리로 구현함 중복 적용시 에러발생 */
 
 article h2 {position: absolute;
 top: 300px;
@@ -110,4 +112,34 @@ font-weight: bold;;
 color: #666;
 border-left: 3px solid #555;
 padding-left: 15px;
+z-index: 10;
     }
+article video{position: absolute;
+left:-100px;
+top:0;
+height: 100%;
+width: auto;
+z-index: 1;
+transition: all 0.8s/*display:none의 경우는 부드러운전환이 안됨*/;
+opacity: 0;}
+/* article 내부에 타이틀 박스 설정 */
+article div{position: absolute;
+width: 100%;
+height: 0px;
+background-color: black;
+top: 300px;
+transition: all 1.2s;
+z-index: 2;}
+article p {position: absolute;
+  color: white;
+  right: -300px;
+  bottom: 100px;
+text-align: end;
+z-index: 10;
+transition: all 1.2s;}
+article b {} 
+article:hover p{right: 0;}
+article:hover b{right: 0;}
+article:hover h2 {color: #fff;}
+article:hover div{top: 270px;
+  height: 70px;}
