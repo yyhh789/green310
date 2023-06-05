@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜스폼_3D</title>
+</head>
+<body>
+    <h1>transform_3D</h1>
+    <p>2D에서 3D로 변환시 가장 중요한 속성은 원근감이다. <br>
+    원근감 : perspective</p>
+    <p>사용법 <br>
+    부모자에 원근값수치 작성 단위포함 parspcetive:수치px</p>
+    <p>주의사항: 수치가 작을수록 왜곡이 커지며 수치가 커질수록 왜곡이 적어진다.</p>
+    <h2>예제</h2>
+    <section>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+        </div>
+    </section>
+        <section>
+            <article>
+                <p></p>
+                <p></p>
+            </article>
+            
+        </section>
+<section class="box">
+    <article>
+        <p></p>
+        <p></p>
+    </article>
+
+</section>    
+
+        <style>
+            *{margin: 0;
+            padding: 0;}
+            section {display: flex;
+                justify-content: space-around;
+            margin-bottom: 50px;}
+            section div {
+                width: 200px;
+            height: 200px;
+            border: 1px solid black;}
+            section div:nth-child(1) {perspective: 150px;}
+            section div:nth-child(3) {perspective: 800px;}
+            section div p {margin: 0;
+                            padding: 0;
+                        width: 100%;
+                    height: 100%;
+                background-color: aqua;
+                opacity: 0.5;
+            transform: rotateY(50deg);}
+            section article {width: 800px;
+                display: flex;
+            height: 600px;
+        border: 1px solid #888;
+    perspective: 200px;}
+        section article p {width: 400px;
+        height: 100%;
+    background-color: violet;
+opacity: 0.8;
+margin: 0;
+transition: all 0.8s;}
+section article p:nth-child(1) {transform-origin: left top;}
+section article p:nth-child(2) {transform-origin: right top;}
+section article:hover p:nth-child(1){
+    transform: rotateY(60deg);}
+section article:hover p:nth-child(2){
+    transform: rotateY(-60deg);}
+    
+    .box {}
+.box article {perspective: 500px;
+display: flex;
+flex-wrap: wrap;
+background-color: red;}
+.box article p {width: 100%;
+height: 50%;}
+.box article p:nth-child(1) {transform-origin: top;}
+.box article p:nth-child(2) {transform-origin: bottom;}
+.box article:hover p:nth-child(1){
+    transform: rotateX(50deg);}
+.box article:hover p:nth-child(2){
+    transform: rotateX(-50deg);}
+        </style>
+    
+</body>
+</html>
