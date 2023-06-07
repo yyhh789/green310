@@ -1,1 +1,60 @@
-@charset 'UTF-8'
+@charset 'UTF-8';
+/* 전체설정 */
+*{padding: 0;margin: 0;}
+ul,ol{list-style: none;}
+a{text-decoration: none;color: black;}
+img {vertical-align: bottom; border: none;}
+
+/* 전체화면 설정 */
+#wrap {width: 100%;
+    /* 레이아웃이 틀어짐을 방지하고
+    일정넓이와 높이 이하로는 콘텐츠가 줄어들지 않도록 설정하기위해 최소값을 정해준다. */
+    min-width: 1024px;
+    min-height: 768px;
+    height: 100%;
+position: fixed;
+background-color: antiquewhite;
+left: 0;
+top:0;
+perspective: 500px;
+}
+
+/* 메뉴버튼설정 */
+#wrap em {width: 50px;
+    position: fixed;
+    left: 40px;
+    top: 50px;
+height: 50px;
+background-color: aqua;
+z-index: 999;}
+
+
+/* 네비설정 */
+#wrap nav {position: fixed;
+height: 100%;
+width: 150px;
+background-color: beige;
+left: 0;
+top: 0;
+z-index: 10;
+transition: all 0.8s;
+transform-origin: left;
+opacity: 0;
+transform: rotateY(120deg);} 
+
+
+/* 섹션설정 */
+#wrap section {width: 100%;
+height: 100%;
+position: fixed;
+background-color: skyblue;
+z-index: 1;
+transform-origin: right;
+transition: all 0.5s;
+}
+
+
+/* 변환모습 */
+#wrap nav.on {transform: rotateY(15deg);
+opacity: 1;}
+#wrap section.on{transform: rotateY(-10deg);}

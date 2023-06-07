@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제1</title>
+</head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(document).ready(function(){
+        // nav li를 클릭했을떄 article의 모양이 바뀌어라
+        // $('nav li').eq(0).click(function(){
+        //     $('article').eq(0).css({'width':'100%','height':'100%','z-index':'10'})
+        // })
+        // $('nav li').eq(1).click(function(){
+        //     $('article').eq(1).css({'width':'100%','height':'100%','z-index':'10'})
+        // })
+        // $('nav li').eq(2).click(function(){
+        //     $('article').eq(2).css({'width':'100%','height':'100%','z-index':'10'})
+        // })
+        // $('nav li').eq(3).click(function(){
+        //     $('article').eq(3).css({'width':'100%','height':'100%','z-index':'10'})
+        // })
+        $('nav li').click(function(){
+            let i = $(this).index()
+            console.log(i);
+            $('article').removeClass('on')
+            $('article').eq(i).addClass('on')
+
+        })
+        $('nav li').eq(0).click(function(){
+            $('header').stop().animate({'top':'20%'},800)
+
+
+        })
+
+        
+        $('nav li').eq(1).click(function(){
+            $('header').stop().animate({'top':'-10%'},800)
+
+
+        })
+        $('nav li').eq(2).click(function(){
+            $('header').stop().animate({'top':'20%'},800)
+
+
+        })
+
+        $('nav li').eq(3).click(function(){
+            $('header').stop().animate({'top':'-10%'},800)
+
+
+        })
+
+
+
+
+    })
+</script>
+<style>
+    *{margin: 0;
+    padding: 0;}
+    ul{list-style: none;}
+    /* 헤더설정 */
+    header {z-index: 999;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top:20%
+    }
+    header h1 {margin: 0 auto;
+        padding: 20px;
+    border: 2px dotted palevioletred;
+width: 70px;
+color: palevioletred;}
+    header nav {margin-top: 50px;}
+    header nav ul {display: flex;
+    justify-content: center;}
+    header li {width: 150px;
+    padding: 20px;
+    font-size: 20px;
+    color: brown;
+    cursor: pointer;}
+    /* 섹션설정 */
+    section{position: fixed;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+    z-index: 1;}
+    article {position: absolute;
+    width: 50%;
+height: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+font-size: 60px;
+font-weight: bold;
+z-index: 1;
+transition: all 0.8s;}
+article .on{width: 100%;
+height: 100%;
+z-index: 10;}
+header li:hover {color: white;}
+
+    article:nth-child(1) {background-color: lightblue;
+    left: -100%;
+top: -100%;}
+article:nth-child(1).on{width: 100%;
+height: 100%;
+z-index: 10;
+left: 0;
+top: 0;}
+    article:nth-child(2) {background-color: lightcoral;
+    right:-100%;
+top: 0;}
+article:nth-child(2).on{width: 100%;
+height: 100%;
+z-index: 10;
+right:0;
+top: 0;}
+    article:nth-child(3) {background-color: lightcyan;
+    left: -100%;
+bottom: -100%;}
+article:nth-child(3).on{width: 100%;
+height: 100%;
+z-index: 10;
+left: 0;
+bottom: 0;}
+    article:nth-child(4) {background-color: lightgoldenrodyellow;
+    right: -100%;
+    bottom: -100%;}
+    article:nth-child(4).on{width: 100%;
+height: 100%;
+z-index: 10;
+right: 0;
+bottom: 0;}
+</style>
+<body>
+    <header>
+        <h1>로고</h1>
+        <nav>
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>화면1</article>
+        <article>화면2</article>
+        <article>화면3</article>
+        <article>화면4</article>
+    </section>
+</body>
+</html>
