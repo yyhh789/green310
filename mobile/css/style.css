@@ -1,0 +1,168 @@
+@charset 'UTF-8';
+
+/* 전체설정 */
+ * {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+    color: 000;}
+img {vertical-align: bottom;}
+
+
+/* 전체프레임설정 */
+
+#wrap {width: 100%;
+    height: 100%;
+    position: fixed;
+left: 0;
+top: 0;
+background-image: url(../img/bg_morning.jpg);
+background-size: cover;
+transition: all 2s;
+}
+
+
+/* 로고설정 */
+
+#wrap h1 {width: 90px;
+        height: 80px;
+        position: fixed;
+        left: 60px;
+        top: 30px;
+    background-image: url(../img/logo_b.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;}
+
+
+
+/* hero설정 */
+article {position: fixed;
+        width: 450px;
+        left: 150px;
+        top: 350px;}
+article p {font-size: 50px;color: #666;}
+article p strong {color: #111;}
+article em {font-size: 14px ;
+color: #333;
+font-style: normal;}
+
+
+/* 모바일구간설정 */
+
+figure {width:1226px ;
+        height: 809px;
+    background-image: url(../img/phone_morning.png);
+position: fixed;
+    top: 200px;
+    right: -300px;}
+    figure p {width: 547px;
+            height: 304px;
+
+    position: absolute;
+    left: 135px;
+    top: 101px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+	overflow: hidden;
+}
+/* 네비설정 */
+nav{position: fixed;
+    left: 0;
+bottom: 70px;
+width: 100%;}
+nav ul {display: flex;
+    width: 100%;
+justify-content: space-around;}
+nav ul li {width:24%;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px 0;
+    text-align: center;}
+
+/* 움직이는 구름설정 */
+.c1 {position: absolute;left: -1146px;
+animation: ani1 110s 0s linear infinite;}
+.c2 {position: absolute;left: 0;
+animation: ani2 100s 0s linear infinite;}
+
+@keyframes ani1 {
+	0%{left: -1146px;}
+	100%{left: 1950px;}
+}
+
+@keyframes ani2 {
+	0%{left: 0;}
+	50%{left: 1950px;}
+	50.001%{left: -1840px;}
+	100%{left: 0;}
+}
+
+/* 모바일구름설정 */
+.m1 {width: 600px;position: absolute;
+left: -600px;
+animation: ani3 110s 0s linear infinite;
+z-index: -1;}
+.m2 {width: 700px;position: absolute;
+left: 0;
+animation: ani4 100s 0s linear infinite;
+z-index: -1;}
+
+@keyframes ani3 {
+	0%{left: -600px;}
+	100%{left: 600px;}
+}
+
+@keyframes ani4 {
+	0%{left: 0;}
+	50%{left: 600px;}
+	50.001%{left: -600px;}
+	100%{left: 0;}
+}
+
+/* 전체프레임 css 각자지정하기 */
+#wrap.morning {background-image: url(../img/bg_morning.jpg);}
+#wrap.morning figure {background-image: url(../img/phone_morning.png);}
+#wrap.morning h1 {background-image: url(../img/logo_b.png);}
+#wrap.afternoon{background-image: url(../img/bg_afternoon.jpg);}
+#wrap.afternoon figure {background-image: url(../img/phone_afternoon.png);}
+#wrap.afternoon h1 {background-image: url(../img/logo_b.png);}
+#wrap.evening {background-image: url(../img/bg_evening.jpg);}
+#wrap.evening figure {background-image: url(../img/phone_evening.png);}
+#wrap.evening figure p{color: white;}
+#wrap.evening  h1 {background-image: url(../img/logo_w.png);}
+#wrap.evening article> p {color: #555;transition: all 2s;}
+#wrap.evening article> p strong{color: white;transition: all 2s;}
+#wrap.evening article> em {color: #555;transition: all 2s;}
+#wrap.night {background-image: url(../img/bg_night.jpg);}
+#wrap.night figure {background-image: url(../img/phone_night.png);}
+#wrap.nightfigure p{color: white;}
+#wrap.night h1 {background-image: url(../img/logo_w.png);}
+#wrap.night article> p strong{color: white;transition: all 2s;}
+#wrap.night article> p {color: #999;transition: all 2s;}
+#wrap.night article> em {color: #999;transition: all 2s;}
+
+
+nav li:nth-child(1) {font-weight: bold;}
+nav li:nth-child(2) {font-weight: bold;}
+nav li:nth-child(3) {font-weight: bold;}
+nav li:nth-child(4) {font-weight: bold;}
+
+nav li:nth-child(1):hover {background-color: black;
+color: white;
+cursor: pointer;
+transition: all 0.5s;}
+nav li:nth-child(2):hover {background-color: black;
+	color: white;
+	cursor: pointer;
+	transition: all 0.5s;}
+	nav li:nth-child(3):hover {background-color: black;
+		color: white;
+		cursor: pointer;
+		transition: all 0.5s;}
+		nav li:nth-child(4):hover {background-color: black;
+			color: white;
+			cursor: pointer;
+			transition: all 0.5s;}
