@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브html로 연결하는 예제</title>
+    <link rel="stylesheet" href="css/ex002.css">
+    <!--제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  
+    <!-- 파일설명
+    menu에 있는 각 페이지를 모두다 연결하고 
+연결페이지는 popUp 또는 다른 섹션으로의 이동으로
+ 표현하는 구조로 html 내부안에 menu의 갯수만큼의 
+섹션을 보유한다.  -->
+</head>
+<body>
+
+    <h1><a href="ex002.html">로고</a></h1>
+    <nav>
+        <ul>
+            <li class="on"><a href="sub/about.html">
+                About
+                    <span></span>
+            </a>
+            </li>
+            <li><a href="sub/fill.html">
+                Fillmography
+                    <span></span>
+            </a>
+            </li>
+            <li><a href="sub/gallery.html">
+                Gallery
+                    <span></span>
+            </a>
+            </li>
+            <li><a href="sub/video.html">
+                Video
+                    <span></span>
+            </a>
+            </li>
+         
+        </ul>
+    </nav>
+    
+
+  
+        <section class="main">메인 또는 intro
+                <div class="wel"><a href="sub/about.html">Welcome</a></div>
+        </section>
+        
+
+
+</body>
+</html>

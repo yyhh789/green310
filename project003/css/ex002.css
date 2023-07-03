@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* 전체설정 */
+ * {margin: 0;
+    padding: 0;}
+    ul ,ol {list-style: none;}
+    a {text-decoration: none;
+        color: #000;}
+    img {vertical-align: bottom;}
+body {background-color: #ccc;}
+
+/* 로고설정 */
+h1 {width: 100px;
+    height: 80px;
+background-color: azure;
+position: fixed;
+left: 50px;
+top: 50px;
+display: flex;
+justify-content: center;
+align-items: center;}
+
+/* 메뉴설정 */
+
+nav {width: 200px;
+    height: auto;
+
+position: fixed;
+left: 50px;
+top: 50%;
+margin-top: -110px;
+display: none;}
+
+nav ul {width: 100%;}
+nav ul li {width: 100%;
+height: 50px;
+margin-bottom: 5px;
+cursor: pointer;
+}
+nav ul li span {display: block;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    margin-top: 15px;
+    transition: all 1.2s;
+}
+nav ul li:hover {color: red;}
+nav ul li:hover span {width: 100%;}
+
+
+nav ul li.on {color: red;}
+nav ul li.on span {width: 100%;}
+
+
+
+/* 섹션설정 */
+section {width: 100%;
+    height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 50px;
+
+}
+
+
+
+
+
+    .main {flex-direction: column;
+        background-color: #aaa;}
+    .main div {cursor: pointer;
+                                }
+     .main div:hover {color: #fff;}
+
+
+
+
+    nav.sub {display: block;}
+
+     /* aboutpgae 설정 */
+
+
+    .about {background-color: #bbb;}
+
+
+
+
+    /* fillpage 설정 */
+
+    .fill {background-color: #ccc;}
+
+
+
+       /* gallerypage 설정 */
+       .gallery {background-color: #ddd;}
+
+       /* videopage 설정 */
+
+      .video {background-color: #eee;} 

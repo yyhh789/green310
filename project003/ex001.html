@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브html이없는예제</title>
+    <link rel="stylesheet" href="css/ex001.css">
+    <!--제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/ex001.js"></script>
+
+    <!-- 파일설명
+    menu에 있는 각 페이지를 모두다 연결하고 
+연결페이지는 popUp 또는 다른 섹션으로의 이동으로
+ 표현하는 구조로 html 내부안에 menu의 갯수만큼의 
+섹션을 보유한다.  -->
+</head>
+<body>
+
+    <h1>로고</h1>
+    <nav>
+        <ul>
+            <li class="on">About
+                <span></span>
+            </li>
+            <li>Fillmography
+                <span></span>
+            </li>
+            <li>Gallery
+                <span></span>
+            </li>
+            <li>Video
+                <span></span>
+            </li>
+         
+        </ul>
+    </nav>
+    
+
+    <div id="wrap">
+        <section>메인 또는 intro
+                <div class="wel">Welcome</div>
+        </section>
+        <section>About</section>
+        <section>Fillmography</section>
+        <section>Gallery</section>
+        <section>Video</section>
+    </div>
+
+
+</body>
+</html>
