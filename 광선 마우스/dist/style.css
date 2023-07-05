@@ -1,0 +1,62 @@
+/* OPTIONAL / defining page color variables */
+:root {--green: #62Ba9B;}
+
+
+/* REQUIRED / without this, the cursor will still show */
+* {
+  cursor: none;
+}
+
+
+/* OPTIONAL / body styling */
+body {
+  margin: 0;
+}
+
+/* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+.small {
+  height: 10px;
+  width: 10px;
+  background-color: var(--green);
+  border-radius: 10px;
+  filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+  
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: height 0.2s, width 0.2s;
+}
+
+/* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+.big {
+  height: 50px;
+  width: 50px;
+  border: 3px solid var(--green);
+  border-radius: 100px;
+  filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+  
+  position: fixed;
+  pointer-events: none;
+  transform: translate(calc(-50%), -50%);
+  transition: height 0.5s, width 0.5s, filter 0.5s;
+}
+
+/* REQUIRED / some styling is necessary for hover effect */
+.hover__big {
+  height: 100px;
+  width: 100px;
+  filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green)) drop-shadow(0 0 40px var(--green));
+  
+  transition: height 0.5s, width 0.5s, filter 0.5s;
+}
+
+/* REQUIRED / some styling is necessary for hover effect */
+.hover__small {
+  height: 8px;
+  width: 8px;
+  
+  transition: height 0.2s, width 0.2s;
+}
+
+
+
