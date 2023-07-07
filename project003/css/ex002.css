@@ -51,7 +51,7 @@ nav ul li:hover span {width: 100%;}
 nav ul li.on {color: red;}
 nav ul li.on span {width: 100%;}
 
-
+ nav.sub {display: block;}
 
 /* 섹션설정 */
 section {width: 100%;
@@ -60,23 +60,73 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 50px;
+position: relative;
 
 }
 
 
-
+/* 메인페이지설정 */
 
 
     .main {flex-direction: column;
-        background-color: #aaa;}
-    .main div {cursor: pointer;
+        cursor: none;
+        perspective: 700;
+       }
+    .main .wel {cursor: pointer;
                                 }
-     .main div:hover {color: #fff;}
+     .main .wel:hover {color: #fff;}
+
+.main .cursor {position: absolute;
+                width: 200px;
+            height: 200px;
+        border-radius: 100px;
+    border: 5px solid #fff;
+    box-sizing: border-box;
+left: 0;
+top: 0;
+margin-left: -100px;
+margin-top: -100px;
+z-index: -1;
+/* transition: width, height, border-color 0.8s; */
+transition-property: width, height, border-color , transform;
+transition-duration: 0.8s;
+
+background-image: url(../img/bg.jpg);
+background-attachment: fixed;
+background-size: cover;
+}
+.main p {font-size: 32px;
+text-align: center;
+margin-bottom: 30px;
+color: #fff;}
+.main p em {
+    font-size: 32px;
+    font-style: normal;
+    color: orange;
+    border-bottom: 0.5px dashed orange;
+    font-weight: bold;
+}
+.main p span {
+    font-size: 32px;
+   
+    color: orange;
+    border-bottom: 0.5px dashed orange;
+    font-weight: bold;
+}
+
+
+.cursor.style1 {border-color: red;
+                width: 50px;
+            height: 50px;}
+
+            .cursor.style2 {transform: rotateY(360deg);}
 
 
 
 
-    nav.sub {display: block;}
+
+
+   
 
      /* aboutpgae 설정 */
 
