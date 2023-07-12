@@ -16,6 +16,7 @@ $(document).ready(function(){
     $('.main p em').mouseenter(function(){
     
         $('.cursor').addClass('style1')
+
     })
     
     $('.main p em').mouseleave(function(){

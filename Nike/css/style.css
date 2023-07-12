@@ -236,7 +236,10 @@ height: 50px;}
 font-size: 60px;
 position: absolute;
 right: 0;}
-.btn i:nth-child(1) {animation: ani 1.5s 0s linear infinite ;}
+
+.btn i:nth-child(1) {animation: ani 1.5s 0s linear infinite ;
+top: 0;
+left: 0;}
 /* animation: ani 1.5s 0.5s linear infinite 
 animation : 키프레임 지속시간 지연시간 가속도 반복 */
 .btn i:nth-child(2) {animation: ani 1.5s 0.5s linear infinite;}
@@ -248,5 +251,4 @@ opacity: 1;}
 100%{right: 100px;
 transform: scale(1.5);
 opacity: 0;}
-
 }
